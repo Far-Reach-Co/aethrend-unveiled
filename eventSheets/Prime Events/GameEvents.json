@@ -45,7 +45,7 @@
 			"eventType": "variable",
 			"name": "maxMags",
 			"type": "number",
-			"initialValue": "30",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
