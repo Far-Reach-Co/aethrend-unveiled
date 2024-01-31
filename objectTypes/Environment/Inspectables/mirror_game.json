@@ -1,0 +1,77 @@
+{
+	"name": "mirror_game",
+	"plugin-id": "Sprite",
+	"sid": 421041908705973,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 712224936699724
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 945860588209342
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1866065,
+						"collisionPoly": {
+							"points": [
+								0.486,
+								0.002,
+								0.6562465820312504,
+								0.11055392456054684,
+								0.7350056152343758,
+								0.23885653686523417,
+								0.73282958984375,
+								0.43709246826171877,
+								0.92872314453125,
+								0.6113125000000003,
+								0.8980809326171869,
+								0.8341273193359383,
+								0.6320599365234374,
+								0.9825841064453122,
+								0.41607324218749947,
+								0.9827277221679687,
+								0.094,
+								0.836,
+								0.062,
+								0.638,
+								0.2304488525390626,
+								0.4425681762695312,
+								0.2661597900390625,
+								0.23646771240234374
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 216141818471375,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

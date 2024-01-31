@@ -1,0 +1,763 @@
+{
+	"name": "Dialogue_Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 978552860333544
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Dia_BG",
+					"sid": 463771809309185,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "dia_Speaker",
+					"sid": 889647429921240,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "txt_dia",
+					"sid": 243589568633130,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 699995940659067
+		},
+		{
+			"functionName": "dialogue",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "TextToSay",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 714265731600988
+				},
+				{
+					"name": "SpeakerPortrait",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 415843258948720
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "typewriter-text",
+					"objectClass": "txt_dia",
+					"sid": 129904014482874,
+					"parameters": {
+						"text": "TextToSay",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dia_Speaker",
+					"sid": 860308061014974,
+					"parameters": {
+						"animation": "SpeakerPortrait",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Dia_BG",
+					"sid": 959630666848623,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "dia_Speaker",
+					"sid": 411550447353328,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "txt_dia",
+					"sid": 812013596926628,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 552897469760070
+		},
+		{
+			"functionName": "DestroyDialogue",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Dia_BG",
+					"sid": 686735786774364,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "dia_Speaker",
+					"sid": 973508762282606,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": ".2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "txt_dia",
+					"sid": 374122338257557,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.4",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 119046642218058
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 617937734900426,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "txt_dia",
+					"sid": 977022172215301,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 788679319187816,
+					"parameters": {
+						"tag": "\"next\""
+					}
+				}
+			],
+			"sid": 823889371118239
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 521987174337306,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "txt_dia",
+					"sid": 207320486087573
+				}
+			],
+			"actions": [
+				{
+					"id": "typewriter-finish",
+					"objectClass": "txt_dia",
+					"sid": 714176554550402
+				}
+			],
+			"sid": 638069045899024
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dia_database",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 845776073192125,
+							"parameters": {
+								"object": "Dialogue_trigger"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Dialogue_trigger",
+							"sid": 149199558525873,
+							"parameters": {
+								"instance-variable": "txt_ID",
+								"comparison": 0,
+								"value": "\"meetCassy\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "FreezePlayer",
+							"sid": 237550190651097
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Dialogue_trigger",
+							"sid": 119981778212551
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "CPlayer",
+							"sid": 156355794398000,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y-500",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "CPlayer",
+							"sid": 665173714118728,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"set": "disabled"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 251609111990569,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 967479785531539,
+							"parameters": [
+								"\"Woah, easy! Don't shoot!\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 205421358032158,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 521117136782093,
+							"parameters": [
+								"\"You're... alive?\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 186031184561226,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 421336926007843,
+							"parameters": [
+								"\"Trying to stay that way, yeah. Name’s Cassy. You got a name? Or just dumb questions?\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 735273722535848,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 695222585821747,
+							"parameters": [
+								"\"How'd you deal with the spirits?\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 735326820090330,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 743224501558043,
+							"parameters": [
+								"\"Uh... odd question, but sure! You want to know about spirits? Gotta visit Dipshit's Tavern\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 760574695099493,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 674530055103878,
+							"parameters": [
+								"\"...down in Haven City. They got this red ale that'll make your head spin. Oh, and that's nothing compared to—\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 584696394489525,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 533671119200144,
+							"parameters": [
+								"\"Stop. You need to leave. Now.\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 409274480839932,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 669729368427224,
+							"parameters": [
+								"\"And you need to learn to watch your step. You're standing on a tripmine. Drop me and you're eating buckshot.\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 940575864365927,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 334967036037862,
+							"parameters": [
+								"\"...\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 473156088132355,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 533419792101967,
+							"parameters": [
+								"\"...not bad\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 146066498748566,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 187638986968491,
+							"parameters": [
+								"\"But the things in this house are nothing to trifle with..\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 277761494632352,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 574627772932158,
+							"parameters": [
+								"\"Neither am I\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 595994062780937,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 258660008022102,
+							"parameters": [
+								"\"For now, maybe we don't kill one another, though?\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 330656539244700,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 931781944525385,
+							"parameters": [
+								"\"...fair enough. -lowers gun- care to disarm this thing?\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 737881755699167,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 603884484392097,
+							"parameters": [
+								"\"no problem! Looks like we got upstairs and down, you take one i'll do the other and we'll meet back here to compare notes later ok?\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 273134423108753,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 331616104163643,
+							"parameters": [
+								"\"Until you decide i'll jsut follow your around though. my dev hasn't programed me for anything else just yet...\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 418198603842051,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "dialogue",
+							"sid": 731530973005712,
+							"parameters": [
+								"\"Until you decide i'll just follow your around though. my dev hasn't programed me for anything else just yet...\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"callFunction": "DestroyDialogue",
+							"sid": 864253784876999
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "CPlayer",
+							"sid": 514333396428940,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"set": "enabled"
+							}
+						},
+						{
+							"callFunction": "UnfreezePlayer",
+							"sid": 359592778080654
+						}
+					],
+					"sid": 458872949804699
+				},
+				{
+					"functionName": "SayNo",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "dialogue",
+							"sid": 851703535040843,
+							"parameters": [
+								"\"Well tough shit this wasn't a real descition\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 502064101800434,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "DestroyDialogue",
+							"sid": 552186336926517
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "CPlayer",
+							"sid": 897512385009477,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"set": "enabled"
+							}
+						},
+						{
+							"callFunction": "UnfreezePlayer",
+							"sid": 932412108223186
+						}
+					],
+					"sid": 965057404945086
+				},
+				{
+					"functionName": "SayYes",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "dialogue",
+							"sid": 255848819047732,
+							"parameters": [
+								"\"-clickityclackity- your good to go. see you soon!\"",
+								"\"cassy\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 237098227822062,
+							"parameters": {
+								"tag": "\"next\""
+							}
+						},
+						{
+							"callFunction": "DestroyDialogue",
+							"sid": 746420650284007
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "CPlayer",
+							"sid": 724854625786340,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"set": "enabled"
+							}
+						},
+						{
+							"callFunction": "UnfreezePlayer",
+							"sid": 562616118827557
+						}
+					],
+					"sid": 197905259759861
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlyerReach",
+							"sid": 561733627554817,
+							"parameters": {
+								"object": "door"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "door",
+							"sid": 408253945763487,
+							"parameters": {
+								"instance-variable": "locked"
+							}
+						},
+						{
+							"id": "compare-opacity",
+							"objectClass": "Dia_BG",
+							"sid": 803558756965326,
+							"parameters": {
+								"comparison": 2,
+								"opacity": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "dialogue",
+							"sid": 998979671124000,
+							"parameters": [
+								"\"This door is locked, try picking it with M\"",
+								"\"hunter\""
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 336918413908058,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"callFunction": "DestroyDialogue",
+							"sid": 728811731011978
+						}
+					],
+					"sid": 375500803618571
+				}
+			],
+			"sid": 785721281868263
+		}
+	],
+	"sid": 941504837589514
+}

@@ -1,0 +1,162 @@
+{
+	"name": "SFX_Zones",
+	"plugin-id": "Sprite",
+	"sid": 142082373059001,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "FloorType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 551729009819219
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7773038,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 419977063767849,
+				"name": "Square",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1364600,
+						"collisionPoly": {
+							"points": [
+								0.46,
+								0.064,
+								0.544,
+								0.064,
+								0.612,
+								0.076,
+								0.776,
+								0.16,
+								0.84,
+								0.224,
+								0.864,
+								0.256,
+								0.936,
+								0.46,
+								0.936,
+								0.544,
+								0.864,
+								0.748,
+								0.84,
+								0.78,
+								0.776,
+								0.844,
+								0.612,
+								0.928,
+								0.544,
+								0.94,
+								0.46,
+								0.94,
+								0.392,
+								0.928,
+								0.228,
+								0.844,
+								0.164,
+								0.78,
+								0.14,
+								0.748,
+								0.068,
+								0.544,
+								0.068,
+								0.46,
+								0.164,
+								0.224,
+								0.228,
+								0.16,
+								0.392,
+								0.076
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 376679958015789,
+				"name": "Circle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1725543,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.076,
+								1,
+								0.538,
+								1,
+								1,
+								0,
+								0.988,
+								0.3835129394531252,
+								0.9176118164062499,
+								0.6868413085937504,
+								0.7349609375,
+								0.8929743652343748,
+								0.46249987792968755
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 344364463618081,
+				"name": "crescent",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,102 @@
+{
+	"name": "Map_stairs1",
+	"plugin-id": "Sprite",
+	"sid": 811420261304995,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 396,
+						"height": 600,
+						"originX": 0.5012626262626263,
+						"originY": 0.47833333333333333,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6065299,
+						"collisionPoly": {
+							"points": [
+								0.18686868686868688,
+								0.005,
+								0.7550505050505051,
+								0.011666666666666667,
+								0.8611111111111112,
+								0.19833333333333333,
+								0.851010101010101,
+								0.66,
+								0.7676767676767676,
+								0.955,
+								0.15151515151515152,
+								0.8816666666666667,
+								0.10353535353535354,
+								0.68,
+								0.10353535353535354,
+								0.16166666666666665
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 940604228901204,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 399,
+						"height": 626,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9607184,
+						"collisionPoly": {
+							"points": [
+								0.18796992481203006,
+								0.0463258785942492,
+								0.7518796992481203,
+								0.052715654952076675,
+								0.8571428571428571,
+								0.23162939297124602,
+								0.8471177944862155,
+								0.6741214057507987,
+								0.7644110275689223,
+								0.9568690095846646,
+								0.15288220551378445,
+								0.8865814696485623,
+								0.10526315789473684,
+								0.6932907348242812,
+								0.10526315789473684,
+								0.1964856230031949
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 361249924110029,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

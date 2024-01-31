@@ -1,0 +1,20 @@
+{
+	"name": "txt_damageBaddie_UI",
+	"plugin-id": "Text",
+	"sid": 953021121349633,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 193544772419325
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 707334004033202
+		}
+	],
+	"effectTypes": []
+}

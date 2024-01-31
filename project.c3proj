@@ -1,0 +1,1054 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 36802,
+	"name": "AtherendUnveiled_V2.0",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "shadowlight",
+			"name": "Shadow light",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "shadowcaster",
+			"name": "Shadow caster",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "wrap",
+			"name": "Wrap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurhorizontal",
+			"name": "Blur horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurvertical",
+			"name": "Blur vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "burn",
+			"name": "Burn",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "darken",
+			"name": "Darken",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "multiply",
+			"name": "Multiply",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpripple",
+			"name": "Warp ripple",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"bundled": false
+		}
+	],
+	"uniqueId": "nzr22zgnyjl",
+	"objectTypes": {
+		"items": [
+			"env_breakStairs",
+			"Parti_MoveingShadows_Env",
+			"Parti_LurkingShadows",
+			"Parti_LurkingShadows_source",
+			"woodsroad",
+			"manor",
+			"garden_map",
+			"Boat",
+			"Boatremovebgpreview"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Mouse",
+					"Keyboard",
+					"Audio"
+				],
+				"subfolders": [],
+				"name": "System"
+			},
+			{
+				"items": [
+					"Flashlight",
+					"PlayerAwarenessLight",
+					"gunFlash_Light",
+					"env_light",
+					"C_PlayerAwarenessLight2",
+					"env_Woodslight",
+					"DayNight_Light",
+					"MiniPeak",
+					"MiniPeak2"
+				],
+				"subfolders": [],
+				"name": "Lights"
+			},
+			{
+				"items": [
+					"Player",
+					"Spawner",
+					"ShadowLight1",
+					"Player_Animator",
+					"CPlayer",
+					"C_Spawner",
+					"C_IconRight",
+					"C_IconLeft",
+					"C_IconUp",
+					"C_IconDown",
+					"CPlayer_Animator2",
+					"ShadowLight_Shade",
+					"Sprite2",
+					"Player_HealthBar",
+					"txt_PlayerInteractions",
+					"txt_PlayerHPReadout"
+				],
+				"subfolders": [],
+				"name": "Player"
+			},
+			{
+				"items": [
+					"Map1",
+					"map_mainFloor",
+					"overarch",
+					"woodsMap1",
+					"map_mainFloor_Addhall",
+					"map_Patrizio",
+					"map_Church",
+					"dipshits_Map",
+					"LosLoses",
+					"MainMenu",
+					"Map_HavenCity1",
+					"Map_Basement",
+					"map_2ndFloor",
+					"Tile_map_sky",
+					"Map_stairs1"
+				],
+				"subfolders": [],
+				"name": "Maps"
+			},
+			{
+				"items": [
+					"Ghost",
+					"GhostSpawner",
+					"Snatcher",
+					"zombie1",
+					"zombie2",
+					"Baddie_rats",
+					"RatSpawner",
+					"baddieShooter",
+					"baddie_Shooter_Bullet",
+					"baddieShooter_Anim"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"C_v20_Tank",
+							"Baddie_C2"
+						],
+						"subfolders": [],
+						"name": "Cassy_2.0"
+					}
+				],
+				"name": "Baddies"
+			},
+			{
+				"items": [
+					"wall",
+					"door",
+					"doorhinge",
+					"doorstopper",
+					"doorstopper_snatcher",
+					"trees",
+					"trees2",
+					"trees3",
+					"trees2Over",
+					"TxTutility",
+					"sector_randomwoods",
+					"ShadeWall",
+					"bedroom",
+					"bedroomOver",
+					"doors",
+					"Tile_Temproad",
+					"ENV_blockables",
+					"ENV_blockables2",
+					"bear",
+					"bedroomDresser",
+					"Parti_Rain1",
+					"bear_Changer"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"Inspector",
+							"mirror_game"
+						],
+						"subfolders": [],
+						"name": "Inspectables"
+					}
+				],
+				"name": "Environment"
+			},
+			{
+				"items": [
+					"camera",
+					"bullet",
+					"PlyerReach",
+					"E",
+					"Particles",
+					"bullettrail_Source",
+					"parti_shadow",
+					"parti_shadow_source",
+					"parti_Ghostblood",
+					"meleeAtk1",
+					"parti_bulletdust",
+					"Curser_1",
+					"areaMap",
+					"TXT_LocationUpdate",
+					"Clawmark_Overlay",
+					"Parti_Spray1",
+					"Location_Zone",
+					"EventTrigger_Lockedroom",
+					"DevNotes",
+					"memory",
+					"txt_damagePlayer_UI",
+					"txt_damageBaddie_UI",
+					"Parti_Spray2"
+				],
+				"subfolders": [],
+				"name": "Utilities"
+			},
+			{
+				"items": [
+					"Sprite"
+				],
+				"subfolders": [],
+				"name": "Decoration"
+			},
+			{
+				"items": [
+					"txt_magsAmmo",
+					"hudBanner",
+					"txt_reserve",
+					"Text",
+					"txt_Playername",
+					"fader"
+				],
+				"subfolders": [],
+				"name": "UIAssets"
+			},
+			{
+				"items": [
+					"TextInput",
+					"Button"
+				],
+				"subfolders": [],
+				"name": "Buttons"
+			},
+			{
+				"items": [
+					"ItemProperties"
+				],
+				"subfolders": [],
+				"name": "Dictionaries"
+			},
+			{
+				"items": [
+					"inv_button_items",
+					"inventory",
+					"inv_button_clues",
+					"obj_inv_slot",
+					"TXT_inv_item_quantity",
+					"obj_item_potions_inventory",
+					"obj_item_potions_game",
+					"FX_obj_item_potions_Shadow",
+					"obj_item_clues_inventory",
+					"obj_item_clues_game",
+					"inv_active_weapon_Left",
+					"inv_active_weapon_Right",
+					"Inventory_powerup_Blindfold",
+					"Chat_inventory",
+					"Blindfold_Overlay",
+					"Blindfold_Detector",
+					"Blindfold_Identifier",
+					"parti_blindfold_WallDetection",
+					"parti_blindfold_WallDetection_Y",
+					"Sprite3",
+					"Parti_blindfold_WallDetection_Source",
+					"Parti_blindfold_WallDetection_Y_Source",
+					"parti_blindfold_360WallDetection",
+					"parti_blindfold_360WallDetection_Source"
+				],
+				"subfolders": [],
+				"name": "Inventory"
+			},
+			{
+				"items": [
+					"MiniGame_icon",
+					"MiniGame_bg",
+					"MiniGame_Spawner",
+					"MiniGame_destroyer",
+					"Target",
+					"TXT_MiniGame_score",
+					"minigame_Lockpicking",
+					"minigame_LockpickingHand"
+				],
+				"subfolders": [],
+				"name": "SkillCheckMinigame"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"NPC_01"
+						],
+						"subfolders": [],
+						"name": "NPCs"
+					}
+				],
+				"name": "City"
+			},
+			{
+				"items": [
+					"CSheet_Labels",
+					"CSheet_BG"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"txt_CHA",
+							"txt_INT",
+							"txt_WIS",
+							"txt_STR",
+							"txt_CON",
+							"txt_DEX",
+							"txt_PointsToSpend",
+							"Button_PlusStats",
+							"Button_MinusStats",
+							"txt_Stat_Details",
+							"txt_CHA_mod",
+							"txt_CON_mod",
+							"txt_INT_mod",
+							"txt_DEX_mod",
+							"txt_WIS_mod",
+							"txt_STR_mod"
+						],
+						"subfolders": [],
+						"name": "CselectV2"
+					}
+				],
+				"name": "CharacterSheet"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "CharacterSheet2"
+			},
+			{
+				"items": [
+					"SFX_Zones"
+				],
+				"subfolders": [],
+				"name": "Zones"
+			},
+			{
+				"items": [
+					"Dialogue_trigger"
+				],
+				"subfolders": [],
+				"name": "Dia_Triggers"
+			},
+			{
+				"items": [
+					"Dia_BG",
+					"Dia_pictureframe",
+					"dia_Speaker",
+					"txt_dia",
+					"Button2",
+					"Dia_Opt_A",
+					"txt_opt1"
+				],
+				"subfolders": [],
+				"name": "zDia_Assets"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"player_fam",
+			"shadowlights",
+			"baddieFam",
+			"Interactable_fam",
+			"snatchers_fam",
+			"InventoryButtons",
+			"Family1",
+			"Inventory_Items",
+			"Inventory_items_game",
+			"DetailGivers_Statblock_Fam",
+			"Memorable_fam",
+			"txt_persist",
+			"ClickableFam",
+			"Inv_OnOff_Fam",
+			"inv_txtOnOff"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"Game_HavenCity",
+					"Game_Dipshits",
+					"Game_Patrizio",
+					"Game_Church",
+					"Game_Sheriff"
+				],
+				"subfolders": [],
+				"name": "HavenCity"
+			},
+			{
+				"items": [
+					"Game_Garden",
+					"Game_Woods2",
+					"Game_1stFloor",
+					"Game_Basement",
+					"Game_2ndFloor",
+					"Game_SecretLab",
+					"Game_GraveYard"
+				],
+				"subfolders": [],
+				"name": "EbonwoodManor"
+			},
+			{
+				"items": [
+					"MainMenu",
+					"DeathScreen",
+					"Game_Stats1"
+				],
+				"subfolders": [],
+				"name": "Menus"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"Inventory",
+			"Env_Events",
+			"SkillCheckMinigame_events",
+			"Dialogue_Events"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"cassy_controller",
+					"CharacterSelect",
+					"GameEvents",
+					"playerControls"
+				],
+				"subfolders": [],
+				"name": "Prime Events"
+			},
+			{
+				"items": [
+					"baddie_Ghost_Events",
+					"baddies_C2.0",
+					"Baddies_GeneralEvents",
+					"baddies_rats_events",
+					"baddies_Snatchers_Events",
+					"baddies_zombie_events",
+					"Baddie_Shooter",
+					"LevelUps"
+				],
+				"subfolders": [],
+				"name": "Baddies"
+			},
+			{
+				"items": [
+					"Fader_Events",
+					"SFX_Events&Functions",
+					"Splash_Events"
+				],
+				"subfolders": [],
+				"name": "SystemEvents"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "SFX_MuddyFootstepsCaution_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 118219411610759,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_FootstepsLoopWetMud.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 853894304857348,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_Rain_Loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 425041366131585,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_RainPondLight_Loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 842055184205127,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_WaterFlowClose_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 795782709989752,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_WaterFlowDistant_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 825038128668223,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_WaterFlowMoveing_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 350555099373139,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_waterside_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 238627815895665,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "TempCassyTaunt3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 640658378472619,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "TempCassyTaunt2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 305367727909367,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "TempCassyTaunt1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 608006773510519,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 253107166713739,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 973891913347727,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 263294188040126,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 469805712631498,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 813108281538698,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt6.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 139782630983487,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt7.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 444195051650622,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt8.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 834722453070318,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HunterTaunt9.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 700571538053961,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "impulsedensehall.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 872096261937255,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "no_bards_left_behind_songtradr2709489.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 124992003370540,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 361328607229766,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 732635854986847,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 518821814727770,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 366887955795508,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 496770479274959,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 418000241478606,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 923220224943070,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			0.3607843137254902,
+			0.3607843137254902,
+			0.3607843137254902,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 7040,
+	"viewportHeight": 3960,
+	"firstLayout": null
+}

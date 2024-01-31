@@ -1,0 +1,685 @@
+{
+	"name": "baddies_Snatchers_Events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Snatcher_Picker",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 927584038131792
+		},
+		{
+			"eventType": "variable",
+			"name": "SnatcherAgro",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 591563467125364
+		},
+		{
+			"eventType": "variable",
+			"name": "HP_Snatcher",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 247018743046770
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 670957711380298
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "snatchers_fam",
+					"sid": 134910876871629,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 947141425079562
+		},
+		{
+			"functionName": "zoomIn",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 922902426143452,
+					"parameters": {
+						"scale": "1.1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 303150338897974,
+					"parameters": {
+						"seconds": ".1"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 501734074768031,
+					"parameters": {
+						"scale": "1.2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 157608107056490,
+					"parameters": {
+						"seconds": ".1"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 799580882949224,
+					"parameters": {
+						"scale": "1.3"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 577307630721126,
+					"parameters": {
+						"seconds": ".1"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 485392126897276,
+					"parameters": {
+						"scale": "1.4"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 458225530065180,
+					"parameters": {
+						"seconds": ".1"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 914572858571642,
+					"parameters": {
+						"scale": "1.5"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 609661034822813,
+					"parameters": {
+						"seconds": ".1"
+					}
+				}
+			],
+			"sid": 500428502847010
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 536034349528417,
+					"parameters": {
+						"object": "snatchers_fam"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "Snatcher",
+					"sid": 517094496909628,
+					"parameters": {
+						"comparison": 5,
+						"number": "1"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "Snatcher",
+					"sid": 736703290838389,
+					"parameters": {
+						"comparison": 3,
+						"number": "16"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "snatchers_fam",
+					"sid": 580279980622577,
+					"parameters": {
+						"instance-variable": "hp",
+						"value": "Player.damage-Self.resistance"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 700742858199879
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Particles",
+					"sid": 516629637857031
+				}
+			],
+			"sid": 397935949036576
+		},
+		{
+			"eventType": "comment",
+			"text": "Activate"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 229991557593899,
+					"parameters": {
+						"object": "EventTrigger_Lockedroom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "snatchers_fam",
+					"sid": 161698416004714,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "EventTrigger_Lockedroom",
+					"sid": 348622017485709
+				},
+				{
+					"id": "shake",
+					"objectClass": "camera",
+					"sid": 641357196915526,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "100",
+						"duration": "1.5",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"callFunction": "zoomIn",
+					"sid": 455550781092490
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "door",
+					"sid": 397821524819085,
+					"parameters": {
+						"angle": "Self.AngleClosed"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "door",
+					"sid": 826689037723268,
+					"parameters": {
+						"instance-variable": "sealed",
+						"value": "true"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PlayerAwarenessLight",
+					"sid": 160092895236325,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "10",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "env_light",
+					"sid": 779702703932422,
+					"parameters": {
+						"animation": "\"flicker\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "PlyerReach",
+					"sid": 975824306896643,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 256226413606582,
+					"parameters": {
+						"object-to-create": "parti_shadow",
+						"layer": "\"OverFX\"",
+						"x": "4939",
+						"y": "7782",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 502610908089779,
+					"parameters": {
+						"variable": "SnatcherAgro",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 778356883835405
+		},
+		{
+			"eventType": "comment",
+			"text": "behavior"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 711645970194827,
+					"parameters": {
+						"variable": "SnatcherAgro"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 342966519702117,
+					"parameters": {
+						"interval-seconds": "random(0.5, 3)"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "snatchers_fam",
+					"sid": 954070521607931,
+					"parameters": {
+						"which": "nearest",
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "snatchers_fam",
+					"sid": 763306146265728,
+					"parameters": {
+						"animation": "\"grab\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "snatchers_fam",
+					"sid": 301379328887090,
+					"parameters": {
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 926620499129004,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "camera",
+					"sid": 617290595503450,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "40",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Flashlight",
+					"sid": 191328331523895,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "random(0.05, 0.11)",
+						"off-time": "random(0.04, 0.1)",
+						"duration": "1.5"
+					}
+				}
+			],
+			"sid": 691236568564390
+		},
+		{
+			"eventType": "comment",
+			"text": "Dispell Snatcher"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 902446241052922,
+					"parameters": {
+						"object": "Snatcher"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "meleeAtk1",
+					"sid": 242550376135800,
+					"parameters": {
+						"object": "Snatcher"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bullet",
+					"sid": 622483139795609,
+					"parameters": {
+						"object": "parti_Ghostblood",
+						"layer": "\"OverFX\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 799747180931400,
+					"parameters": {
+						"variable": "HP_Snatcher",
+						"value": "Player.damage"
+					}
+				}
+			],
+			"sid": 630480558019797,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 427546568935015,
+					"parameters": {
+						"variable": "HP_Snatcher",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 573920969501405
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "snatchers_fam",
+					"sid": 463202934083072
+				},
+				{
+					"id": "set-rate",
+					"objectClass": "parti_shadow",
+					"sid": 395815547148424,
+					"parameters": {
+						"rate": "500"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "PlayerAwarenessLight",
+					"sid": 416411791327944,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "door",
+					"sid": 449984816911019,
+					"parameters": {
+						"instance-variable": "sealed",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "PlyerReach",
+					"sid": 722130784885998,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 412517121774576,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "env_light",
+					"sid": 745545106009170,
+					"parameters": {
+						"animation": "\"on\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-rate",
+					"objectClass": "parti_shadow",
+					"sid": 500850255235712,
+					"parameters": {
+						"rate": "0"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 857875895367192,
+					"parameters": {
+						"scale": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 912394379914698,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "parti_shadow",
+					"sid": 300468928984841
+				}
+			],
+			"sid": 160546135974394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Snatcher",
+					"sid": 223957917367224,
+					"parameters": {
+						"object": "Player"
+					}
+				},
+				{
+					"id": "is-flashing",
+					"objectClass": "Player_Animator",
+					"sid": 619312364804089,
+					"behaviorType": "Flash",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HurtPlayer",
+					"sid": 919687241990423,
+					"parameters": [
+						"total_lvl+1"
+					]
+				}
+			],
+			"sid": 851660591161032
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Snatched",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 332872893140423
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 543988642785549,
+					"parameters": {
+						"variable": "SnatcherAgro"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 427998493791502,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 326341373143362,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "5509"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 317541878786388,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": " 8587"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 591119056568615,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "4150"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 924010626425454,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "7150"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Player",
+							"sid": 775798686913564,
+							"parameters": {
+								"x": "4850",
+								"y": "7850"
+							}
+						}
+					],
+					"sid": 314422889337474,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 686443301605202
+}

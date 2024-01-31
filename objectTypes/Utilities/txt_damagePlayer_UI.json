@@ -1,0 +1,20 @@
+{
+	"name": "txt_damagePlayer_UI",
+	"plugin-id": "Text",
+	"sid": 288842168756771,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 592683603999444
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 240811508577063
+		}
+	],
+	"effectTypes": []
+}

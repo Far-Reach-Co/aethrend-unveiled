@@ -1,0 +1,61 @@
+{
+	"name": "baddie_Shooter_Bullet",
+	"plugin-id": "Sprite",
+	"sid": 534260089833362,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 199072714438178
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 567661055578438
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 40,
+						"originX": 0.7756073491423099,
+						"originY": 0.5703543351942577,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7075401,
+						"collisionPoly": {
+							"points": [
+								0.6159695817490495,
+								0.014925373134328358,
+								0.9961977186311787,
+								0.014925373134328358,
+								0.9961977186311787,
+								0.9850746268656716,
+								0.6159695817490495,
+								0.9850746268656716
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 135615529458762,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

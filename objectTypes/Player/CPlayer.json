@@ -1,0 +1,114 @@
+{
+	"name": "CPlayer",
+	"plugin-id": "Sprite",
+	"sid": 362019083129422,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 627804514435491
+		},
+		{
+			"name": "TauntCaller",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 775046066277556
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 619766277428776
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 550342463489825
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 364534085437427
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 705261307461262
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 191924881995435
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 202,
+						"height": 202,
+						"originX": 0.49504950495049505,
+						"originY": 0.49504950495049505,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 268180,
+						"collisionPoly": {
+							"points": [
+								0.4306930693069307,
+								0.0049504950495049506,
+								0.5693069306930693,
+								0.0049504950495049506,
+								0.8663366336633663,
+								0.15841584158415842,
+								0.995049504950495,
+								0.4306930693069307,
+								0.995049504950495,
+								0.5693069306930693,
+								0.8415841584158416,
+								0.8663366336633663,
+								0.5693069306930693,
+								0.995049504950495,
+								0.4306930693069307,
+								0.995049504950495,
+								0.13366336633663367,
+								0.8415841584158416,
+								0.0049504950495049506,
+								0.5693069306930693,
+								0.0049504950495049506,
+								0.4306930693069307,
+								0.15841584158415842,
+								0.13366336633663367
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gunpoint",
+								"x": 0.8415841584158416,
+								"y": 0.49504950495049505
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 229750659813301,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

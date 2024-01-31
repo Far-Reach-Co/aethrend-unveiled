@@ -1,0 +1,26 @@
+{
+	"name": "InventoryButtons",
+	"plugin-id": "Sprite",
+	"sid": 897732121796148,
+	"instanceVariables": [
+		{
+			"name": "Catagory",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 578282444964311
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 331307742366276
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"inv_button_items",
+		"inv_button_clues"
+	]
+}

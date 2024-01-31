@@ -1,0 +1,221 @@
+{
+	"name": "bedroomDresser",
+	"plugin-id": "Sprite",
+	"sid": 573480366530481,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 988965362069032
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 704354770154268
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5617283950617284,
+						"originY": 0.5722543352601156,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1163412,
+						"collisionPoly": {
+							"points": [
+								0.595679012345679,
+								0.028901734104046242,
+								0.9936696747202935,
+								0.23261168375180655,
+								0.6877426335841047,
+								0.7928988947344655,
+								0.4609346742983217,
+								1,
+								0,
+								0.7256582623961343,
+								0.3117283950617284,
+								0.31213872832369943,
+								0.3734567901234568,
+								0.19653179190751446
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5617283950617284,
+						"originY": 0.5722543352601156,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4639046,
+						"collisionPoly": {
+							"points": [
+								0.5927875660083912,
+								0,
+								0.8616210560739767,
+								0,
+								0.6754059968171289,
+								0.6232568377015224,
+								0.5707442201214057,
+								0.017843764641381717,
+								0.11457523298852212,
+								0.16039783279330766,
+								0.4717372376241804,
+								0.8330695532649927,
+								0.4503307578004431,
+								0.9575759799494217,
+								0,
+								0.7256582623961343,
+								0,
+								0,
+								0.3665944794077933,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5617283950617284,
+						"originY": 0.5722543352601156,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6390327,
+						"collisionPoly": {
+							"points": [
+								0.595679012345679,
+								0.028901734104046242,
+								0.8616210560739767,
+								0,
+								0.6820987654320988,
+								0.7803468208092486,
+								0.45987654320987653,
+								0.9942196531791907,
+								0,
+								0.7256582623961343,
+								0.3117283950617284,
+								0.31213872832369943,
+								0.3734567901234568,
+								0.19653179190751446
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1718055,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 694574472766674,
+				"name": "talldresser",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5617283950617284,
+						"originY": 0.5722543352601156,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4533300,
+						"collisionPoly": {
+							"points": [
+								0.595679012345679,
+								0.028901734104046242,
+								0.9936696747202935,
+								0.23261168375180655,
+								0.6877426335841047,
+								0.7928988947344655,
+								0.4609346742983217,
+								1,
+								0,
+								0.7256582623961343,
+								0.3117283950617284,
+								0.31213872832369943,
+								0.3734567901234568,
+								0.19653179190751446
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 324,
+						"height": 173,
+						"originX": 0.5617283950617284,
+						"originY": 0.5722543352601156,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7383735,
+						"collisionPoly": {
+							"points": [
+								0.595679012345679,
+								0.028901734104046242,
+								0.8616210560739767,
+								0,
+								0.6820987654320988,
+								0.7803468208092486,
+								0.45987654320987653,
+								0.9942196531791907,
+								0,
+								0.7256582623961343,
+								0.3117283950617284,
+								0.31213872832369943,
+								0.3734567901234568,
+								0.19653179190751446
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 978936982561615,
+				"name": "floor",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

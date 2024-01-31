@@ -1,0 +1,20 @@
+{
+	"name": "ShadowLight_Shade",
+	"plugin-id": "shadowlight",
+	"sid": 404345819114496,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 840532489193024
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 169593744277874
+		}
+	],
+	"effectTypes": []
+}

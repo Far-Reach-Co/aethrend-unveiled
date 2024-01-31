@@ -1,0 +1,69 @@
+{
+	"name": "PlayerAwarenessLight",
+	"plugin-id": "Sprite",
+	"sid": 975325038346173,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 128514584966845
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 654698430691285
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2000,
+						"height": 2000,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8282361,
+						"collisionPoly": {
+							"points": [
+								0.49383789062500016,
+								0,
+								0.87627294921875,
+								0.17099194335937504,
+								0.993599853515625,
+								0.5015620117187501,
+								0.8470772705078119,
+								0.8625146484375,
+								0.544,
+								0.998,
+								0.15914550781250003,
+								0.8517078857421877,
+								0.008911376953124998,
+								0.5068619384765629,
+								0.1363162841796875,
+								0.16609399414062492
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 613758907100796,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

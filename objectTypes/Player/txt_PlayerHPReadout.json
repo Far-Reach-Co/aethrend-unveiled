@@ -1,0 +1,9 @@
+{
+	"name": "txt_PlayerHPReadout",
+	"plugin-id": "Text",
+	"sid": 692305557807384,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

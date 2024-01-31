@@ -1,0 +1,102 @@
+{
+	"name": "door",
+	"plugin-id": "Sprite",
+	"sid": 741517293679304,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "open",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 127719019574612
+		},
+		{
+			"name": "locked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 358897263372361
+		},
+		{
+			"name": "sealed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 805297916714439
+		},
+		{
+			"name": "AngleClosed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 481745872825137
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 146588051143734
+		},
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 588772507897467
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 506743687283417
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 300,
+						"originX": 0.49333333333333335,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9977683,
+						"collisionPoly": {
+							"points": [
+								0.4927926345839846,
+								0,
+								0.5002610479099451,
+								0,
+								0.5513509114583334,
+								1,
+								0.4307318793402778,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.4666666666666667,
+								"y": 0.92
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 887375046732309,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"name": "snatchers_fam",
+	"plugin-id": "Sprite",
+	"sid": 115401342847745,
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 790303851527756
+		},
+		{
+			"name": "resistance",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 145977092876171
+		},
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 170678853432772
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Snatcher"
+	]
+}

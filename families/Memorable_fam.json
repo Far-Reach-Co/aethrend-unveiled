@@ -1,0 +1,30 @@
+{
+	"name": "Memorable_fam",
+	"plugin-id": "Sprite",
+	"sid": 980642330237553,
+	"instanceVariables": [
+		{
+			"name": "InLight",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 324312651639161
+		},
+		{
+			"name": "ID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 860339527117306
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"CPlayer_Animator2",
+		"Baddie_C2",
+		"Ghost",
+		"zombie1",
+		"Baddie_rats"
+	]
+}

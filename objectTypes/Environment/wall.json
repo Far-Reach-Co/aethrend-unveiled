@@ -1,0 +1,45 @@
+{
+	"name": "wall",
+	"plugin-id": "TiledBg",
+	"sid": 349279339257381,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "RealWidth",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 276378743412552
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 440320990219331
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 596620747023944
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 483784549175292
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1344657,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

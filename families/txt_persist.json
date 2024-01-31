@@ -1,0 +1,24 @@
+{
+	"name": "txt_persist",
+	"plugin-id": "Text",
+	"sid": 220237001585509,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 645814639876564
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"txt_CHA",
+		"txt_CHA_mod",
+		"txt_CON",
+		"txt_CON_mod",
+		"txt_DEX",
+		"txt_DEX_mod",
+		"txt_INT",
+		"txt_INT_mod"
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Family1",
+	"plugin-id": "Sprite",
+	"sid": 132919467576004,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"inv_button_items"
+	]
+}

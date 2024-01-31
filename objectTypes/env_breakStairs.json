@@ -1,0 +1,74 @@
+{
+	"name": "env_breakStairs",
+	"plugin-id": "Sprite",
+	"sid": 411654819895255,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 698,
+						"height": 338,
+						"originX": 0.46346704871060174,
+						"originY": 0.14201183431952663,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9343319,
+						"collisionPoly": {
+							"points": [
+								0.0064469914040114614,
+								0,
+								1,
+								0,
+								1,
+								0.4408284023668639,
+								0.0064469914040114614,
+								0.4408284023668639
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 245973798870286,
+				"name": "idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 696,
+						"height": 194,
+						"originX": 0.548132183908046,
+						"originY": 2.670103092783505,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8681373,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 463577155815702,
+				"name": "Break",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

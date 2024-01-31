@@ -1,0 +1,24 @@
+{
+	"name": "DetailGivers_Statblock_Fam",
+	"plugin-id": "Text",
+	"sid": 976104877246325,
+	"instanceVariables": [
+		{
+			"name": "Detail",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 500700103814764
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"txt_DEX",
+		"txt_INT",
+		"txt_STR",
+		"txt_WIS",
+		"txt_CON",
+		"txt_CHA"
+	]
+}

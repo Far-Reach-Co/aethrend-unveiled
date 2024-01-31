@@ -1,0 +1,13 @@
+{
+	"name": "Interactable_fam",
+	"plugin-id": "Sprite",
+	"sid": 933500460987317,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"door",
+		"mirror_game",
+		"Location_Zone"
+	]
+}

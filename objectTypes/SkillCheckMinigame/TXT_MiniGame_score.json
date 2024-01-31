@@ -1,0 +1,20 @@
+{
+	"name": "TXT_MiniGame_score",
+	"plugin-id": "Text",
+	"sid": 670810459564821,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 716832050101591
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 237170539202280
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,23 @@
+{
+	"name": "TXT_LocationUpdate",
+	"plugin-id": "Text",
+	"sid": 562682537808753,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "LocationID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 240234976287818
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 371873402639933
+		}
+	],
+	"effectTypes": []
+}

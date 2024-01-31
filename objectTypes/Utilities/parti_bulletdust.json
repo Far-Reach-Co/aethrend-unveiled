@@ -1,0 +1,21 @@
+{
+	"name": "parti_bulletdust",
+	"plugin-id": "Particles",
+	"sid": 683132795292733,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 23,
+		"height": 23,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2461038,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

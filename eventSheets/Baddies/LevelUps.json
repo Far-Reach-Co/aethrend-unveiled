@@ -1,0 +1,367 @@
+{
+	"name": "LevelUps",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "total_lvl",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 923541046448538
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Trailblazer",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 722484662964318
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Medium",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 136496263177667
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Rogue",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 569087355943931
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Fighter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 154673664787737
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Warlock",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 555132632922879
+		},
+		{
+			"eventType": "variable",
+			"name": "PaladinorCleric",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 255762741731288
+		},
+		{
+			"eventType": "variable",
+			"name": "Lvl_Bard",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 982628044336123
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Trailblazer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Story Locked. improved ranged weapon damage, 2nd unlock bullet time, 3rd choose a subclass, 4th improve stats, 5th double shoot"
+				}
+			],
+			"sid": 440796526679027
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bard",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Learn to play guitar, Bonus Content --stretch goal"
+				}
+			],
+			"sid": 595132177981588
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Medium",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Major Story development, might not make sense "
+				}
+			],
+			"sid": 812465961858966
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Rogue",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Improved Lockpicking / sneaking / other skills"
+				}
+			],
+			"sid": 289253790251867
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fighter",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Win a fight ring, Improve melee damage and resilience "
+				}
+			],
+			"sid": 509460419366806
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Warlock",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Make a pact. Get some magic powers, at a cost ---eldritch Engineer"
+				}
+			],
+			"sid": 337749781432320
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Paladin/Cleric",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "something holy from the church, stretch goal unclear on direction"
+				}
+			],
+			"sid": 588028279947404
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Total",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "update_total_lvl",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 604687435911428,
+							"parameters": {
+								"variable": "total_lvl",
+								"value": "Lvl_Trailblazer+Lvl_Bard+Lvl_Fighter+Lvl_Medium+Lvl_Rogue+Lvl_Warlock"
+							}
+						}
+					],
+					"sid": 256301855272321
+				},
+				{
+					"functionName": "LevelUp_Trailblazer",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 673292645149463,
+							"parameters": {
+								"variable": "Lvl_Trailblazer",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "update_total_lvl",
+							"sid": 189823651864092
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 567764135890912,
+							"parameters": {
+								"variable": "Max_PlayerHealth",
+								"value": "Lvl_Trailblazer*10+(total_lvl*(floor(CON_stat/2)-5))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 418474697107786,
+							"parameters": {
+								"variable": "PlayerHealth",
+								"value": "Max_PlayerHealth"
+							}
+						},
+						{
+							"callFunction": "Update_PlayerHP",
+							"sid": 740285621978043
+						}
+					],
+					"sid": 833920258297395
+				}
+			],
+			"sid": 212272917156781
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 754110752532008,
+					"parameters": {
+						"key": 76
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LevelUp_Trailblazer",
+					"sid": 288162642903321
+				}
+			],
+			"sid": 750965906160606
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 821021989269379,
+					"parameters": {
+						"key": 75
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "update_total_lvl",
+					"sid": 960203185107195
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 452852153843834,
+					"parameters": {
+						"variable": "Max_PlayerHealth",
+						"value": "Lvl_Trailblazer*10+(total_lvl*(floor(CON_stat/2)-5))"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 597174208237816,
+					"parameters": {
+						"variable": "PlayerHealth",
+						"value": "Max_PlayerHealth"
+					}
+				},
+				{
+					"callFunction": "Update_PlayerHP",
+					"sid": 722190425417441
+				}
+			],
+			"sid": 659088740921189
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 380514758313897
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "update_total_lvl",
+					"sid": 733121056477080
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 942228745993335,
+					"parameters": {
+						"variable": "Max_PlayerHealth",
+						"value": "Lvl_Trailblazer*10+(total_lvl*(floor(CON_stat/2)-5))"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 697922745254671,
+					"parameters": {
+						"variable": "PlayerHealth",
+						"value": "Max_PlayerHealth"
+					}
+				},
+				{
+					"callFunction": "Update_PlayerHP",
+					"sid": 455097598469765
+				}
+			],
+			"sid": 474204474972508
+		}
+	],
+	"sid": 362034390806664
+}

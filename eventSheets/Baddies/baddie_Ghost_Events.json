@@ -1,0 +1,334 @@
+{
+	"name": "baddie_Ghost_Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 894663088482519
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "GhostSpawner",
+					"sid": 745210404687635,
+					"parameters": {
+						"object": "Ghost",
+						"layer": "\"baddiesOver\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 170270387179144
+		},
+		{
+			"eventType": "comment",
+			"text": "appearAndHunt"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 297099997061812,
+					"parameters": {
+						"interval-seconds": "random(1,5)"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Ghost",
+					"sid": 527277158752247,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Ghost",
+					"sid": 296457629913121,
+					"parameters": {
+						"object": "Flashlight"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Ghost",
+					"sid": 377381765050669,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "random((Player.X-500),(Player.X+500))",
+						"y": "random((Player.Y-500),(Player.Y+500))"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Ghost",
+					"sid": 876496160704708,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				}
+			],
+			"sid": 261019401020396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Ghost",
+					"sid": 666528382433995,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Ghost",
+					"sid": 529439378597331,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "move-along-path",
+					"objectClass": "Ghost",
+					"sid": 659607447940483,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Ghost",
+					"sid": 193351155357309,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				}
+			],
+			"sid": 949028685191676
+		},
+		{
+			"eventType": "comment",
+			"text": "Hide"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Ghost",
+					"sid": 101533800155411,
+					"parameters": {
+						"object": "Flashlight"
+					}
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "Flashlight",
+					"sid": 652055413523531,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Ghost",
+					"sid": 859198124449679,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Ghost",
+					"sid": 586933221567051,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.7",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Ghost",
+					"sid": 809211171590046,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 943613487962411
+		},
+		{
+			"eventType": "comment",
+			"text": "Attack"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ghost",
+					"sid": 671053270263691,
+					"parameters": {
+						"object": "Player"
+					}
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "Ghost",
+					"sid": 972292204164968,
+					"parameters": {
+						"comparison": 5,
+						"opacity": "20"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Ghost",
+					"sid": 662401483067407,
+					"parameters": {
+						"animation": "\"attack\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Ghost",
+					"sid": 676268468319110,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "Player.X",
+						"end-y": "Player.Y",
+						"time": "0.1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Ghost",
+					"sid": 448998148427371,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "800",
+						"end-y": "800",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"callFunction": "HurtPlayer",
+					"sid": 610705149851881,
+					"parameters": [
+						"0"
+					]
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Ghost",
+					"sid": 708242265340056,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.7",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 566980449205185,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Ghost",
+					"sid": 866392888308885,
+					"parameters": {
+						"x": "GhostSpawner.X",
+						"y": "GhostSpawner.Y"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Ghost",
+					"sid": 202145523613816,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "600",
+						"end-y": "600",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Ghost",
+					"sid": 255118563723235,
+					"parameters": {
+						"animation": "\"main\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 343317397007381
+		}
+	],
+	"sid": 168753688702808
+}

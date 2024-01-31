@@ -1,0 +1,27 @@
+{
+	"name": "Parti_Spray2",
+	"plugin-id": "Particles",
+	"sid": 957973409881006,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 909781468066833
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 113,
+		"height": 154,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6944200,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

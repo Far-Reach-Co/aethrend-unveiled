@@ -1,0 +1,36 @@
+{
+	"name": "TXT_inv_item_quantity",
+	"plugin-id": "Spritefont2",
+	"sid": 957734590262194,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Slot_ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 216394132972783
+		},
+		{
+			"name": "Quantity",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 573677235432699
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2844682,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

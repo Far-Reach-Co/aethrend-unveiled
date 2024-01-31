@@ -1,0 +1,54 @@
+{
+	"name": "Blindfold_Detector",
+	"plugin-id": "Sprite",
+	"sid": 698043631685893,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 669648732788668
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 144820116204258
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 342943609289296
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4812213,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 304097977260181,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

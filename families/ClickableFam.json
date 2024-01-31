@@ -1,0 +1,34 @@
+{
+	"name": "ClickableFam",
+	"plugin-id": "Sprite",
+	"sid": 629817641117963,
+	"instanceVariables": [
+		{
+			"name": "OriginalWidth",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 443862322956108
+		},
+		{
+			"name": "OriginalHeight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 462476889068442
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"obj_item_potions_game",
+		"Button_PlusStats",
+		"Button_MinusStats",
+		"inv_button_items",
+		"inv_button_clues",
+		"Inventory_powerup_Blindfold",
+		"obj_item_potions_inventory",
+		"obj_item_clues_inventory",
+		"obj_item_clues_game"
+	]
+}

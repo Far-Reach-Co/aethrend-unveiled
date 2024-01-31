@@ -1,0 +1,32 @@
+{
+	"name": "ShadeWall",
+	"plugin-id": "TiledBg",
+	"sid": 706837046904266,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 952035472600740
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 795779500577804
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3864202,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

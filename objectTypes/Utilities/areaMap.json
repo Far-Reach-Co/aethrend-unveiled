@@ -1,0 +1,36 @@
+{
+	"name": "areaMap",
+	"plugin-id": "TiledBg",
+	"sid": 742051936685415,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "localID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 236396232002958
+		},
+		{
+			"name": "TextTime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 550580530164635
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9887061,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

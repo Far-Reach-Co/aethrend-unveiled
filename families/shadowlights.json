@@ -1,0 +1,12 @@
+{
+	"name": "shadowlights",
+	"plugin-id": "shadowlight",
+	"sid": 979677159930020,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ShadowLight1",
+		"ShadowLight_Shade"
+	]
+}

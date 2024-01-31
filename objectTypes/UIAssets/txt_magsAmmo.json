@@ -1,0 +1,15 @@
+{
+	"name": "txt_magsAmmo",
+	"plugin-id": "Text",
+	"sid": 823415443508025,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 876717440775569
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,60 @@
+{
+	"name": "Location_Zone",
+	"plugin-id": "Sprite",
+	"sid": 168208240086500,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "TargetLayout",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 992403766362889
+		},
+		{
+			"name": "SpawnID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 402651018351262
+		},
+		{
+			"name": "TargetTitleToDisplay",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 741364921893865
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.488,
+						"originY": 0.248,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9977634,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 672369634946475,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,377 @@
+{
+	"name": "baddies_C2.0",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 717718412408098,
+					"parameters": {
+						"object": "C_v20_Tank"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "C_v20_Tank",
+					"sid": 868512552196848,
+					"parameters": {
+						"animation": "\"idle\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 167150835892158,
+					"parameters": {
+						"object-to-create": "Parti_Spray1",
+						"layer": "\"baddiesOver\"",
+						"x": "bullet.X",
+						"y": "bullet.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Parti_Spray1",
+					"sid": 100567926452898,
+					"parameters": {
+						"angle": "bullet.Angle-180"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 169935342649017
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "C_v20_Tank",
+					"sid": 213329379029827,
+					"parameters": {
+						"instance-variable": "HitsToBreak",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 195617212327272
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "C_v20_Tank",
+					"sid": 801988647576951,
+					"parameters": {
+						"instance-variable": "HitsToBreak",
+						"comparison": 2,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 633713121120044
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Parti_Spray1",
+					"sid": 522748464023245
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "C_v20_Tank",
+					"sid": 326543302911992,
+					"parameters": {
+						"animation": "\"broke\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_v20_Tank",
+					"sid": 846166344598388,
+					"parameters": {
+						"object": "Baddie_C2",
+						"layer": "\"baddiesOver\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_v20_Tank",
+					"sid": 236935674054346,
+					"parameters": {
+						"object": "Parti_Spray2",
+						"layer": "\"map\"",
+						"image-point": "2",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Parti_Spray2",
+					"sid": 959974940442610,
+					"parameters": {
+						"angle": "90"
+					}
+				}
+			],
+			"sid": 131003783877573
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Baddie_C2",
+					"sid": 525684774188734,
+					"parameters": {
+						"object": "Flashlight"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Flashlight",
+					"sid": 576281011471837,
+					"parameters": {
+						"animation": "\"setting5\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 636637133176502,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 343998409504052,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Baddie_C2",
+							"sid": 206252663209971,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "regenerate-obstacle-map",
+							"objectClass": "Baddie_C2",
+							"sid": 817675893836977,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 705796731124043
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 758834501245694
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "Baddie_C2",
+							"sid": 335827348839344,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						}
+					],
+					"sid": 466103869496662
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "Baddie_C2",
+							"sid": 100153818470065,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "Baddie_C2",
+							"sid": 323793302941372,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 696127153049429
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Baddie_C2",
+							"sid": 782999523373789,
+							"parameters": {
+								"object": "PlyerReach"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Baddie_C2",
+							"sid": 971611997410520,
+							"parameters": {
+								"animation": "\"Monster\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 461536744334856
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Baddie_C2",
+							"sid": 716292919234369,
+							"parameters": {
+								"object": "PlyerReach"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Baddie_C2",
+							"sid": 355934894181310,
+							"parameters": {
+								"animation": "\"Human\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 477257708823258
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Baddie_C2",
+					"sid": 304505987839030,
+					"parameters": {
+						"object": "Flashlight"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Baddie_C2",
+					"sid": 715722761113260,
+					"disabled": true,
+					"parameters": {
+						"object": "Flashlight"
+					}
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "Flashlight",
+					"sid": 360778680419673,
+					"parameters": {
+						"comparison": 4,
+						"opacity": "10"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Flashlight",
+					"sid": 310794390316794,
+					"parameters": {
+						"animation": "\"setting1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Baddie_C2",
+					"sid": 845218658318006,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 463199446002789
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Baddie_C2",
+					"sid": 281317147152405,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "Baddie_C2",
+					"sid": 591100964133063,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 144487224234329
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Baddie_C2",
+					"sid": 792862473967691,
+					"parameters": {
+						"object": "PlayerAwarenessLight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "PlayerAwarenessLight",
+					"sid": 486030413861773,
+					"parameters": {
+						"opacity": "distance(Player.X, Player.Y, Baddie_C2.X, Baddie_C2.Y)/25\n"
+					}
+				}
+			],
+			"sid": 745005680036047
+		}
+	],
+	"sid": 206404220910904
+}

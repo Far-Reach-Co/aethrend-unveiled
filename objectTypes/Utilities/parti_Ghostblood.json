@@ -1,0 +1,27 @@
+{
+	"name": "parti_Ghostblood",
+	"plugin-id": "Particles",
+	"sid": 184599842032394,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 344225949174903
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 55,
+		"height": 59,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 4820354,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

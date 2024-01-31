@@ -1,0 +1,27 @@
+{
+	"name": "Tile_map_sky",
+	"plugin-id": "TiledBg",
+	"sid": 479880209648521,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 400950237380055
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 2000,
+		"height": 1333,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9571831,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

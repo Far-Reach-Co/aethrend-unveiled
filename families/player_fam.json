@@ -1,0 +1,18 @@
+{
+	"name": "player_fam",
+	"plugin-id": "Sprite",
+	"sid": 340304884838151,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Player",
+		"Flashlight",
+		"PlayerAwarenessLight",
+		"CPlayer",
+		"C_PlayerAwarenessLight2",
+		"C_IconUp",
+		"C_IconDown",
+		"PlyerReach"
+	]
+}

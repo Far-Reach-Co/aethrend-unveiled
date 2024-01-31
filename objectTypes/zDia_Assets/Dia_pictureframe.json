@@ -1,0 +1,50 @@
+{
+	"name": "Dia_pictureframe",
+	"plugin-id": "Sprite",
+	"sid": 625951782017041,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1458,
+						"height": 760,
+						"originX": 0.5,
+						"originY": 0.4763157894736842,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9435146,
+						"collisionPoly": {
+							"points": [
+								0.0006858710562414266,
+								0,
+								0.9993141289437586,
+								0,
+								0.9993141289437586,
+								1,
+								0.0006858710562414266,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 775144717056609,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

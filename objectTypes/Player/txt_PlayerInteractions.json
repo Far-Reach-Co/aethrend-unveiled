@@ -1,0 +1,15 @@
+{
+	"name": "txt_PlayerInteractions",
+	"plugin-id": "Text",
+	"sid": 384907210852388,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 896982874124861
+		}
+	],
+	"effectTypes": []
+}

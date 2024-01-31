@@ -1,0 +1,24 @@
+{
+	"name": "inv_txtOnOff",
+	"plugin-id": "Text",
+	"sid": 212243805456033,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"txt_CHA",
+		"CSheet_Labels",
+		"txt_CHA_mod",
+		"txt_CON",
+		"txt_CON_mod",
+		"txt_INT_mod",
+		"txt_INT",
+		"txt_DEX_mod",
+		"txt_DEX",
+		"txt_WIS_mod",
+		"txt_WIS",
+		"txt_STR_mod",
+		"txt_STR",
+		"txt_Stat_Details"
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"name": "Splash_Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Fader_Events"
+		},
+		{
+			"eventType": "variable",
+			"name": "playerName",
+			"type": "string",
+			"initialValue": "HunterX",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 351284450649000
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 785502024978295
+				}
+			],
+			"actions": [],
+			"sid": 864553731508424
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "TextInput",
+					"sid": 854495695283274
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 326140262323810,
+					"parameters": {
+						"variable": "playerName",
+						"value": "TextInput.Text"
+					}
+				}
+			],
+			"sid": 732866549864781
+		}
+	],
+	"sid": 393155641413394
+}

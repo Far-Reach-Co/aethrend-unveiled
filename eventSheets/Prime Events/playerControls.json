@@ -1,0 +1,1882 @@
+{
+	"name": "playerControls",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "FlashlightOn",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 208234237358016
+		},
+		{
+			"eventType": "variable",
+			"name": "IsDashing",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 841024090780261
+		},
+		{
+			"eventType": "variable",
+			"name": "CanMelee",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 805236642652880
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dash",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 447749908162675,
+							"parameters": {
+								"key": 16
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 650986058222065,
+							"parameters": {
+								"variable": "IsDashing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetDirectionForDash",
+							"sid": 805857000049936
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 226189940925736,
+							"parameters": {
+								"variable": "IsDashing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 706684485392618,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.3",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player_Animator",
+							"sid": 832786440339684,
+							"parameters": {
+								"animation": "\"Dash\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 423361425495370,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 428265233641657,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player",
+							"sid": 136525729334288,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 836571009662222,
+							"parameters": {
+								"variable": "IsDashing",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 974943361273445
+				},
+				{
+					"functionName": "SetDirectionForDash",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 884702145945449,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 782872966752381,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [],
+							"sid": 853084212331745,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 857678419034348,
+											"parameters": {
+												"key": 65
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 855069684797895,
+											"parameters": {
+												"key": 87
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 729951259322015,
+											"parameters": {
+												"key": 83
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "Player",
+											"sid": 948556035866654,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "0"
+											}
+										}
+									],
+									"sid": 131983313427413
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 485083647845790,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 474191333298302,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Player",
+									"sid": 721346919060549,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "45"
+									}
+								}
+							],
+							"sid": 836497652846414
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 630284497175578,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [],
+							"sid": 606883845078179,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 504939124862215,
+											"parameters": {
+												"key": 65
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 737204467312887,
+											"parameters": {
+												"key": 87
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 876312329149159,
+											"parameters": {
+												"key": 68
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "Player",
+											"sid": 958235580945615,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "90"
+											}
+										}
+									],
+									"sid": 572674616933972
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 717408731699981,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 127311528361954,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Player",
+									"sid": 189392695433855,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "135"
+									}
+								}
+							],
+							"sid": 194467967405379
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 869864683792301,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [],
+							"sid": 567607137781531,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 390396825880064,
+											"parameters": {
+												"key": 68
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 421702279034750,
+											"parameters": {
+												"key": 87
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 755778855330504,
+											"parameters": {
+												"key": 83
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "Player",
+											"sid": 350422633887877,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "180"
+											}
+										}
+									],
+									"sid": 872951827581049
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 179316144920972,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 176562530387660,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Player",
+									"sid": 952781227537109,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "225"
+									}
+								}
+							],
+							"sid": 896151813095496
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 919304793380545,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [],
+							"sid": 949126870709176,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 711328788083010,
+											"parameters": {
+												"key": 65
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 612553369311096,
+											"parameters": {
+												"key": 68
+											},
+											"isInverted": true
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 586683188196789,
+											"parameters": {
+												"key": 83
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "Player",
+											"sid": 396031845616747,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "270"
+											}
+										}
+									],
+									"sid": 466121185532136
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 765192967160388,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 819207717655495,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Player",
+									"sid": 638021918793478,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "315"
+									}
+								}
+							],
+							"sid": 876882047282521
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 898454174136739
+						}
+					]
+				}
+			],
+			"sid": 822664993569289
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "flashlight",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 552194768018457,
+							"parameters": {
+								"variable": "isdead"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Inventory_powerup_Blindfold",
+							"sid": 192399423689486,
+							"parameters": {
+								"instance-variable": "Active"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 153181756373752,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 943173721421194,
+									"parameters": {
+										"key": 70
+									}
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "Flashlight",
+									"sid": 716449235624908,
+									"parameters": {
+										"comparison": 5,
+										"opacity": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Flashlight",
+									"sid": 747261901388889,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 802938862796252
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 499001834562591,
+									"parameters": {
+										"key": 70
+									}
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "Flashlight",
+									"sid": 200735224229995,
+									"parameters": {
+										"comparison": 3,
+										"opacity": "99"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Flashlight",
+									"sid": 963545184688686,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 556349961272140
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-mouse-wheel",
+									"objectClass": "Mouse",
+									"sid": 809157887116438,
+									"parameters": {
+										"direction": "up"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Flashlight",
+									"sid": 279449843434839,
+									"parameters": {
+										"instance-variable": "setting",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Flashlight",
+									"sid": 107950295933797,
+									"parameters": {
+										"animation": "\"setting\"&Self.setting",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 210890276164679
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-mouse-wheel",
+									"objectClass": "Mouse",
+									"sid": 442309940719714,
+									"parameters": {
+										"direction": "down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Flashlight",
+									"sid": 424310361275637,
+									"parameters": {
+										"instance-variable": "setting",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Flashlight",
+									"sid": 291090128561501,
+									"parameters": {
+										"animation": "\"setting\"&Self.setting",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 200151588553090
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Flashlight",
+									"sid": 263126373482129,
+									"parameters": {
+										"instance-variable": "setting",
+										"comparison": 5,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Flashlight",
+									"sid": 538079489972318,
+									"parameters": {
+										"instance-variable": "setting",
+										"value": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Flashlight",
+									"sid": 434105900152714,
+									"parameters": {
+										"animation": "\"setting\"&Self.setting",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 136912335723020
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Flashlight",
+									"sid": 250628140182585,
+									"parameters": {
+										"instance-variable": "setting",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Flashlight",
+									"sid": 473556325408213,
+									"parameters": {
+										"instance-variable": "setting",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Flashlight",
+									"sid": 626697762787653,
+									"parameters": {
+										"animation": "\"setting\"&Self.setting",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 263437236328892
+						}
+					]
+				}
+			],
+			"sid": 472063012434878
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movements",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 262435326682559,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 678027929894130,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Player",
+							"sid": 141912599807228,
+							"disabled": true,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 888657278221855
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 335236479055100,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 201303768920767,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Player",
+							"sid": 289670318407389,
+							"disabled": true,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						}
+					],
+					"sid": 105781700811996
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 468553652294445,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 796217446777943,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Player",
+							"sid": 530175911460550,
+							"disabled": true,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 438879235753347
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 874738376162891,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 419195842268991,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Player",
+							"sid": 971783287862404,
+							"disabled": true,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "270"
+							}
+						}
+					],
+					"sid": 549876340519084
+				},
+				{
+					"eventType": "comment",
+					"text": "walk/idle"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 128611778959331,
+							"parameters": {
+								"variable": "IsDashing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 198737834438047,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 689739874207458,
+									"parameters": {
+										"first-angle": "337.5",
+										"second-angle": "22.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 458396328270966,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 910591677431631,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 301708096794920,
+											"parameters": {
+												"animation": "\"R\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 353596571374018
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 381139346881955,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 241042185791474,
+											"parameters": {
+												"animation": "\"R\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 504869714558976
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 263405305332549,
+									"parameters": {
+										"first-angle": "22.5",
+										"second-angle": "67.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 638872383416487,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 623042558387951,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 291672639528534,
+											"parameters": {
+												"animation": "\"frontRWalking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 234405710129290
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 458242673766704,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 281410159069882,
+											"parameters": {
+												"animation": "\"frontR\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 493528525707024
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 910674342567104,
+									"parameters": {
+										"first-angle": "67.5",
+										"second-angle": "112.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 792597989620145,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 260565875043369,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 337869660301034,
+											"parameters": {
+												"animation": "\"frontLWalking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 924012943537772
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 433463950418377,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 954889735201880,
+											"parameters": {
+												"animation": "\"frontL\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 724874143642386
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 499545933290967,
+									"parameters": {
+										"first-angle": "112.5",
+										"second-angle": "157.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 691381562489946,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 127275509011863,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 661222778570050,
+											"parameters": {
+												"animation": "\"frontLWalking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 658099307476617
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 218537959290100,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 713402287922376,
+											"parameters": {
+												"animation": "\"frontL\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 908038271315998
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 401999714830184,
+									"parameters": {
+										"first-angle": "157.5",
+										"second-angle": "202.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 378624622116097,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 282199104360699,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 422560492529048,
+											"parameters": {
+												"animation": "\"L\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 172749161480394
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 988318683315596,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 456887953627419,
+											"parameters": {
+												"animation": "\"L\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 718874384521610
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 252383136642496,
+									"parameters": {
+										"first-angle": "202.5",
+										"second-angle": "247.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 484363777837999,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 471895494997518,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 489597242932299,
+											"parameters": {
+												"animation": "\"backLwalking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 201872422542963
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 600952092053989,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 953287391445854,
+											"parameters": {
+												"animation": "\"backL\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 962926390105662
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 859700291101701,
+									"parameters": {
+										"first-angle": "247.5",
+										"second-angle": "292.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 190256272246110,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 634898397807061,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 303903010728006,
+											"parameters": {
+												"animation": "\"back\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 306705552805090
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 668798505174313,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 555249575295766,
+											"parameters": {
+												"animation": "\"back\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 378438799580155
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-between-angles",
+									"objectClass": "Player",
+									"sid": 888269685037620,
+									"parameters": {
+										"first-angle": "292.5",
+										"second-angle": "337.5"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 370424396854552,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 326209240817717,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 888458892689104,
+											"parameters": {
+												"animation": "\"backRWalking\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 274036560740572
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Player",
+											"sid": 244370701120985,
+											"behaviorType": "8Direction",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player_Animator",
+											"sid": 586181871399706,
+											"parameters": {
+												"animation": "\"backR\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 180155929188871
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 961910976862251
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Utility",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "HurtPlayer",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "DamageAmount",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 137841736264089
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 983744518827291,
+							"parameters": {
+								"frame-number": "Self.AnimationFrame+1"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Player_Animator",
+							"sid": 272602572584757,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 914905560001918,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "80",
+								"duration": "0.6",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 872588008316075,
+							"parameters": {
+								"variable": "PlayerHealth",
+								"value": "DamageAmount"
+							}
+						},
+						{
+							"callFunction": "Update_PlayerHP",
+							"sid": 683683615074451
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 137314074907986,
+							"parameters": {
+								"x": "random(0,2200) ",
+								"y": "random(0,3000)"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 185546322607704,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 521987075898647,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 762334075133715,
+							"parameters": {
+								"instance-variable": "Variable1",
+								"value": "random(1,6)"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Player_Animator",
+							"sid": 881188407411645,
+							"parameters": {
+								"object": "txt_damagePlayer_UI",
+								"layer": "\"OverFX\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_damagePlayer_UI",
+							"sid": 445700468921824,
+							"parameters": {
+								"text": "DamageAmount"
+							}
+						}
+					],
+					"sid": 507443709016017
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 930712969146606,
+							"parameters": {
+								"comparison": 4,
+								"number": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Clawmark_Overlay",
+							"sid": 485290999305081,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 162813307511550
+				},
+				{
+					"functionName": "Update_PlayerHP",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "Player_HealthBar",
+							"sid": 436354512942908,
+							"parameters": {
+								"width": "30*PlayerHealth"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_PlayerHPReadout",
+							"sid": 878219394608659,
+							"parameters": {
+								"text": "PlayerHealth&\" / \"&Max_PlayerHealth"
+							}
+						}
+					],
+					"sid": 849688774398519
+				}
+			],
+			"sid": 200680748409712
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MeleeAtks",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 850620721993548,
+							"parameters": {
+								"mouse-button": "right",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 894455677167039,
+							"parameters": {
+								"variable": "CanMelee"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 576515003259698,
+							"parameters": {
+								"variable": "CanMelee",
+								"value": "false"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Player",
+							"sid": 109251412790957,
+							"parameters": {
+								"object": "meleeAtk1",
+								"layer": "\"player\"",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "meleeAtk1",
+							"sid": 361376548444970,
+							"parameters": {
+								"animation": "inv_active_weapon_Right.AnimationName",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "meleeAtk1",
+							"sid": 935257637559077,
+							"parameters": {
+								"angle": "Player.Angle"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "meleeAtk1",
+							"sid": 608967290303893,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Player",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "meleeAtk1",
+							"sid": 338335456313585
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 730411080910677,
+							"parameters": {
+								"seconds": ".5"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 246029811119084,
+							"parameters": {
+								"variable": "CanMelee",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 774381178575255
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "meleeAtk1",
+							"sid": 906197632935717
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "meleeAtk1",
+							"sid": 473576010682439
+						}
+					],
+					"sid": 361688977470671
+				}
+			],
+			"sid": 859713533419051
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerIsFrozen",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 271253016938333
+		},
+		{
+			"functionName": "FreezePlayer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 202768986260153,
+					"parameters": {
+						"variable": "PlayerIsFrozen",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 862199865448644,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 448635496644383
+		},
+		{
+			"functionName": "UnfreezePlayer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 844831184758599,
+					"parameters": {
+						"variable": "PlayerIsFrozen",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 674776340212100,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 526500946566717
+		}
+	],
+	"sid": 188490542456003
+}

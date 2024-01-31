@@ -1,0 +1,49 @@
+{
+	"name": "Inventory_items_game",
+	"plugin-id": "Sprite",
+	"sid": 651573641702610,
+	"instanceVariables": [
+		{
+			"name": "Name_Fam",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 649661165557854
+		},
+		{
+			"name": "Item_Type_Fam",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 136550182703314
+		},
+		{
+			"name": "Equip_Type_Fam",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 852829293444555
+		},
+		{
+			"name": "Quantitiy_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 783850484456261
+		},
+		{
+			"name": "Sort_prior_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 709231220496713
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"obj_item_potions_game",
+		"FX_obj_item_potions_Shadow",
+		"obj_item_clues_game"
+	]
+}

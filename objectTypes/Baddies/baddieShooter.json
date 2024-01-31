@@ -1,0 +1,143 @@
+{
+	"name": "baddieShooter",
+	"plugin-id": "Sprite",
+	"sid": 422372494569452,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 713129697588656
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 667560086559748
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.505,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2327103,
+						"collisionPoly": {
+							"points": [
+								0.43,
+								0,
+								0.57,
+								0,
+								0.87,
+								0.155,
+								1,
+								0.43,
+								1,
+								0.57,
+								0.845,
+								0.87,
+								0.57,
+								1,
+								0.43,
+								1,
+								0.13,
+								0.845,
+								0,
+								0.57,
+								0,
+								0.43,
+								0.155,
+								0.13
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1,
+								"y": 0.495
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 259438912346178,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.505,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7979913,
+						"collisionPoly": {
+							"points": [
+								0.43,
+								0,
+								0.57,
+								0,
+								0.87,
+								0.155,
+								1,
+								0.43,
+								1,
+								0.57,
+								0.845,
+								0.87,
+								0.57,
+								1,
+								0.43,
+								1,
+								0.13,
+								0.845,
+								0,
+								0.57,
+								0,
+								0.43,
+								0.155,
+								0.13
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1,
+								"y": 0.495
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 371022151225351,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "Baddies_GeneralEvents",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "baddieFam",
+					"sid": 267824972066636,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 663917790510113,
+			"disabled": true
+		}
+	],
+	"sid": 827841357239417
+}

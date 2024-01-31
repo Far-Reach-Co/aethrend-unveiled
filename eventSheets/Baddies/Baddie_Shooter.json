@@ -1,0 +1,315 @@
+{
+	"name": "Baddie_Shooter",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 948209304636272
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "baddieShooter",
+					"sid": 166429618922627,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "acquire-target",
+					"objectClass": "baddieShooter",
+					"sid": 109430352166288,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Player"
+					}
+				}
+			],
+			"sid": 233030828018125
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-shoot",
+					"objectClass": "baddieShooter",
+					"sid": 903691407557972,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "baddieShooter",
+					"sid": 555637485792861,
+					"parameters": {
+						"object": "baddie_Shooter_Bullet",
+						"layer": "\"OverFX\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 451785087071611
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "baddie_Shooter_Bullet",
+					"sid": 745819051962724,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "baddie_Shooter_Bullet",
+					"sid": 531353468904570
+				},
+				{
+					"callFunction": "HurtPlayer",
+					"sid": 698724821890321,
+					"parameters": [
+						"2"
+					]
+				}
+			],
+			"sid": 832117369730521
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "baddie_Shooter_Bullet",
+					"sid": 784537911719562,
+					"parameters": {
+						"object": "trees2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "baddie_Shooter_Bullet",
+					"sid": 786864443732284
+				}
+			],
+			"sid": 975583673670726
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "baddieShooter",
+					"sid": 565098525489063,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 897433586170088,
+					"parameters": {
+						"interval-seconds": "random(1,5)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "baddieShooter",
+					"sid": 822896071490496,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "random(Player.X-2000, Player.X+2000)",
+						"y": "random(Player.Y-2000, Player.Y+2000)"
+					}
+				}
+			],
+			"sid": 775096548600589
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "baddieShooter",
+					"sid": 872172182422466,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "baddieShooter",
+					"sid": 802896628460304,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 263497889010963
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "baddieShooter",
+					"sid": 496169416673129,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "baddieShooter",
+					"sid": 335552265167516,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "random(Player.X-2000, Player.X+2000)",
+						"y": "random(Player.Y-2000, Player.Y+2000)"
+					}
+				}
+			],
+			"sid": 325518465994865
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 183500699326637
+				},
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 255619779023606,
+					"parameters": {
+						"object": "baddieShooter"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "baddieShooter",
+					"sid": 185707988538773,
+					"parameters": {
+						"object": "baddieShooter_Anim",
+						"layer": "\"baddiesOver\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 303563502480612
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "baddieShooter_Anim",
+					"sid": 337845753360839
+				},
+				{
+					"id": "pick-overlapping-point",
+					"objectClass": "System",
+					"sid": 226371370931895,
+					"parameters": {
+						"object": "baddieShooter",
+						"x": "baddieShooter_Anim.X",
+						"y": "baddieShooter_Anim.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "baddieShooter_Anim",
+					"sid": 420196172906919,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "baddieShooter",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 883087675041390
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "baddieShooter",
+					"sid": 318539061544184
+				},
+				{
+					"id": "pick-overlapping-point",
+					"objectClass": "System",
+					"sid": 725477574108227,
+					"parameters": {
+						"object": "baddieShooter_Anim",
+						"x": "baddieShooter.X",
+						"y": "baddieShooter.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "baddieShooter_Anim",
+					"sid": 798199676862098
+				}
+			],
+			"sid": 823363784415107
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-shoot",
+					"objectClass": "baddieShooter",
+					"sid": 543143922297255,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "baddieShooter",
+					"sid": 141026634283359,
+					"parameters": {
+						"object": "gunFlash_Light",
+						"layer": "\"light\"",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 665562912329993
+		}
+	],
+	"sid": 674276736843432
+}

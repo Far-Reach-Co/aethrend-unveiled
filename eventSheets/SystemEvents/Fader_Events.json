@@ -1,0 +1,104 @@
+{
+	"name": "Fader_Events",
+	"events": [
+		{
+			"functionName": "Fade_FromBlack",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "FadeInTime",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"sid": 581410323836374
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "fader",
+					"sid": 564332568711989,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "FadeInTime",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 236877887939423
+		},
+		{
+			"functionName": "Fade_ToBlack",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "FadeOutTime",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"sid": 115707703943794
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "fader",
+					"sid": 980787798339884,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "FadeOutTime",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 498320558047218
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 762666492574164
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Fade_FromBlack",
+					"sid": 573498044868899,
+					"parameters": [
+						"2"
+					]
+				}
+			],
+			"sid": 494350968893069
+		}
+	],
+	"sid": 506316436028734
+}

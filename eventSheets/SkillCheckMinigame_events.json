@@ -1,0 +1,1743 @@
+{
+	"name": "SkillCheckMinigame_events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MinigameActive",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 417244050749438
+		},
+		{
+			"eventType": "variable",
+			"name": "MG_SuccessCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 532186296026478
+		},
+		{
+			"eventType": "variable",
+			"name": "MG_FailCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 442677763821997
+		},
+		{
+			"eventType": "variable",
+			"name": "ScoreToWinLoose",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 194445556690656
+		},
+		{
+			"eventType": "variable",
+			"name": "Minigame_Icon_Speed",
+			"type": "number",
+			"initialValue": "700",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 861902083317071
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 376709086210816
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 447702481636640,
+					"parameters": {
+						"variable": "MinigameActive",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 634849228973409
+		},
+		{
+			"functionName": "RunLockPickMiniGame",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 755066281683222,
+					"parameters": {
+						"variable": "MinigameActive",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 156690072766633,
+					"parameters": {
+						"layer": "\"Minigame\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "minigame_LockpickingHand",
+					"sid": 419438274835975,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "2350",
+						"end-y": "2700",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 191671894247126
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 486572439411456,
+					"parameters": {
+						"key": 77
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlyerReach",
+					"sid": 625167818204805,
+					"parameters": {
+						"object": "door"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 914259467666937,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "door",
+							"sid": 800435238548669,
+							"parameters": {
+								"instance-variable": "locked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RunLockPickMiniGame",
+							"sid": 329811123720966
+						}
+					],
+					"sid": 290525949439074
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 868229985984613,
+					"parameters": {
+						"variable": "MinigameActive"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 646125013996533
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 476482587986265,
+					"parameters": {
+						"layer": "\"Minigame\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "minigame_LockpickingHand",
+					"sid": 704938392960185,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "2850",
+						"end-y": "3200",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 357239614689185,
+					"parameters": {
+						"variable": "MG_SuccessCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 431453736250830,
+					"parameters": {
+						"variable": "MG_FailCount",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "UpdateScore",
+					"sid": 826563695555450
+				},
+				{
+					"id": "destroy",
+					"objectClass": "MiniGame_icon",
+					"sid": 839497426780312
+				},
+				{
+					"id": "set-active",
+					"objectClass": "TXT_MiniGame_score",
+					"sid": 758233247337244,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "inactive"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "TXT_MiniGame_score",
+					"sid": 932115713337300,
+					"parameters": {
+						"z": "0"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "TXT_MiniGame_score",
+					"sid": 630083986346785,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetColor",
+						"end-value": "rgbEx(255, 255, 255)",
+						"time": "0.1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 347162306825265
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 536914834268482,
+					"parameters": {
+						"variable": "MinigameActive"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 644822533207256,
+					"parameters": {
+						"variable": "MG_FailCount",
+						"comparison": 2,
+						"value": "ScoreToWinLoose"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 792227944916644,
+					"parameters": {
+						"variable": "MG_SuccessCount",
+						"comparison": 2,
+						"value": "ScoreToWinLoose"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 686561390739832,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 774226307040351,
+							"parameters": {
+								"object": "MiniGame_destroyer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "MiniGame_icon",
+							"sid": 855789008386054
+						}
+					],
+					"sid": 379651976310089
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "MiniGame_icon",
+							"sid": 727786849493209
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "MiniGame_icon",
+							"sid": 788768142920662,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "\"ID\"&floor(random(0, 3)) + 1"
+							}
+						}
+					],
+					"sid": 906391137060974
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 770198701112468,
+							"parameters": {
+								"interval-seconds": "random(0.35,.95)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "MiniGame_Spawner",
+							"sid": 910465876591533,
+							"parameters": {
+								"object": "MiniGame_icon",
+								"layer": "\"Minigame\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MiniGame_icon",
+							"sid": 380248776474248,
+							"parameters": {
+								"animation": "Self.ID",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "MiniGame_icon",
+							"sid": 545130952743321,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "Minigame_Icon_Speed"
+							}
+						}
+					],
+					"sid": 970956980826026
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "GameBehaviors",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "User Inputs correctly"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 914249080761054,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 617813984172630,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 332704133259915,
+							"parameters": {
+								"animation": "\"ID1\""
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 624441118453005,
+							"parameters": {
+								"key": 40
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 506888236966240,
+							"parameters": {
+								"key": 39
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 448618404104309,
+							"parameters": {
+								"key": 38
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 816109153161761,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Target",
+							"sid": 829762817665356,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
+							}
+						},
+						{
+							"callFunction": "ReturnColor",
+							"sid": 650597286963677
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 327907749982922,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 895306717615231
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "minigame_LockpickingHand",
+							"sid": 187054901457988,
+							"parameters": {
+								"angle": "180",
+								"distance": "10"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 427619622588449,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 491772484095985
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 589352863821016,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 366190243716688,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 707757937813552,
+							"parameters": {
+								"animation": "\"ID2\""
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 477639558584136,
+							"parameters": {
+								"key": 37
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 459904204285728,
+							"parameters": {
+								"key": 39
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 266059381613542,
+							"parameters": {
+								"key": 40
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 355320067660625,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Target",
+							"sid": 555193183758771,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
+							}
+						},
+						{
+							"callFunction": "ReturnColor",
+							"sid": 942726536294663
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 277282620673376,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 133551089095576
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "minigame_LockpickingHand",
+							"sid": 599835752705991,
+							"parameters": {
+								"angle": "270",
+								"distance": "10"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 707351919663421,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 633266093415210
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 510034341057225,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 873957209289305,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 331701280154287,
+							"parameters": {
+								"animation": "\"ID3\""
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 796347455847555,
+							"parameters": {
+								"key": 40
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 891398684554357,
+							"parameters": {
+								"key": 37
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 735345858413854,
+							"parameters": {
+								"key": 38
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 112643421091794,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Target",
+							"sid": 406582724897859,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
+							}
+						},
+						{
+							"callFunction": "ReturnColor",
+							"sid": 553573116050601
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 647071279677582,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 735159231122630
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "minigame_LockpickingHand",
+							"sid": 777883717577611,
+							"parameters": {
+								"angle": "0",
+								"distance": "10"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 244956301267955,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 192192579623373
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 909206972313952,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 395711036307883,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 669572843818461,
+							"parameters": {
+								"animation": "\"ID4\""
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 603332332041546,
+							"parameters": {
+								"key": 39
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 122403825228013,
+							"parameters": {
+								"key": 37
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 302213600560898,
+							"parameters": {
+								"key": 38
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 723198551381938,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Target",
+							"sid": 524582248428396,
+							"parameters": {
+								"color": "rgbEx(255, 255, 255)"
+							}
+						},
+						{
+							"callFunction": "ReturnColor",
+							"sid": 339113605041374
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 275727477357184,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 461841707488038
+						},
+						{
+							"id": "move-at-angle",
+							"objectClass": "minigame_LockpickingHand",
+							"sid": 122904428381611,
+							"parameters": {
+								"angle": "90",
+								"distance": "10"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 170969755868563,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 784467436340363
+				},
+				{
+					"eventType": "comment",
+					"text": "User Inputs Wrong Key"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 322985113931642,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 592846031368750,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 978067694758537,
+							"parameters": {
+								"animation": "\"ID1\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 988279998971742,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 422567465769497
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 636476749416844,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 331065307269612,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 650133689974927,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 889424330656745,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 315438149274704,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 694801038726916
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 912935648318121,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 920155990096199,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 912647759230828,
+							"parameters": {
+								"animation": "\"ID2\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 987852193890732,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 628846166206475
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 974434287061435,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 175852604246306,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 933974661060478,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 723768358167502,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 391331547663708,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 178283336417926
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 437022188170917,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 951664449114851,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 902968101557630,
+							"parameters": {
+								"animation": "\"ID3\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 982026724308922,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 759711041124801
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 934852709585760,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 806877437908294,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 665704422244882,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 708628053622685,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 267998238727408,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 349723608289846
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 418311236763502,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 708976862534672,
+							"parameters": {
+								"object": "Target"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "MiniGame_icon",
+							"sid": 687811284443438,
+							"parameters": {
+								"animation": "\"ID4\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 844423079743748,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 469042488701433
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 380602723887092,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 769007900131343,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 415186685926002,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 969802384926902,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 596533937799568,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 859417690694594
+				},
+				{
+					"eventType": "comment",
+					"text": "Fade out notes"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 992562176904732,
+							"parameters": {
+								"object": "Target"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 763258664793466,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "MiniGame_icon",
+							"sid": 328101708280060,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 936433341731549
+				},
+				{
+					"eventType": "comment",
+					"text": "Miss"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "MiniGame_icon",
+							"sid": 520275175500494,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "Target.X+50"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 776142096280796,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 628644949273634
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MiniGame_icon",
+							"sid": 524151953518154,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 791946780126005,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "UpdateScore",
+							"sid": 644385773432137
+						},
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 136183089093861,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 281627587396564,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "5"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 352214580270814,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-magnitude",
+							"objectClass": "MiniGame_bg",
+							"sid": 755832895396755,
+							"behaviorType": "Sine",
+							"parameters": {
+								"magnitude": "0"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 640665425300354,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 212145775065423
+				},
+				{
+					"eventType": "comment",
+					"text": "Score"
+				},
+				{
+					"functionName": "ReturnColor",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Target",
+							"sid": 796800922987746,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetColor",
+								"end-value": "rgbEx(255,100,100)",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 629207021387920
+				},
+				{
+					"functionName": "UpdateScore",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 832464595368431,
+							"parameters": {
+								"text": "\"Success = \"&MG_SuccessCount&\".    Fail = \"&MG_FailCount"
+							}
+						}
+					],
+					"sid": 213735592583711
+				}
+			],
+			"sid": 500590579812544
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Win Game",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 464435054441167,
+							"parameters": {
+								"variable": "MinigameActive"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 327643683365943,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"comparison": 2,
+								"value": "ScoreToWinLoose"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 462380605237264,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"comparison": 5,
+								"value": "ScoreToWinLoose"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "MiniGame_icon",
+							"sid": 114595785262462
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 706548452808598,
+							"parameters": {
+								"text": "\"SUCCESS    \"&\"Success = \"&MG_SuccessCount&\".    Fail = \"&MG_FailCount"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 290807546427630,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 309402724616608,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetColor",
+								"end-value": "rgbEx(0, 255, 0)",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "minigame_LockpickingHand",
+							"sid": 269416426493862,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "2850",
+								"end-y": "3200",
+								"time": "2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 989849343336993,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "800"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 454207253574544,
+							"parameters": {
+								"variable": "MinigameActive",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 935181332902136,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlyerReach",
+									"sid": 919990500640509,
+									"parameters": {
+										"object": "door"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "door",
+									"sid": 850898520705697,
+									"parameters": {
+										"instance-variable": "locked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "door",
+									"sid": 194970487954162,
+									"parameters": {
+										"instance-variable": "locked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 353616257917138
+						}
+					]
+				}
+			],
+			"sid": 767260059010969
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Lose Game",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 184052572635232,
+							"parameters": {
+								"variable": "MinigameActive"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 969133327152150,
+							"parameters": {
+								"variable": "MG_FailCount",
+								"comparison": 5,
+								"value": "ScoreToWinLoose"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 162376447187008,
+							"parameters": {
+								"variable": "MG_SuccessCount",
+								"comparison": 2,
+								"value": "ScoreToWinLoose"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "MiniGame_icon",
+							"sid": 917697620064172
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 885015857627102,
+							"parameters": {
+								"text": "\"FAIL    \"&\"Success = \"&MG_SuccessCount&\".    Fail = \"&MG_FailCount"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 349331253395129,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "TXT_MiniGame_score",
+							"sid": 224732733744318,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetColor",
+								"end-value": "rgbEx(255, 0, 0)",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 270600146128867,
+							"parameters": {
+								"variable": "Minigame_Icon_Speed",
+								"value": "700"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 672435295269350,
+							"parameters": {
+								"variable": "MinigameActive",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 256051038845756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Parti_LurkingShadows_source",
+							"sid": 435342749650164,
+							"parameters": {
+								"object": "MiniGame_bg"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Parti_LurkingShadows_source",
+							"sid": 982748175050645
+						}
+					],
+					"sid": 122750966620722
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MiniGame_icon",
+							"sid": 414782384474129,
+							"parameters": {
+								"object": "Target"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Target",
+							"sid": 537114198182368,
+							"parameters": {
+								"animation": "\"blink\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 203711130163670
+				}
+			],
+			"sid": 730711117732156
+		}
+	],
+	"sid": 223365185392051
+}

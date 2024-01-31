@@ -1,0 +1,118 @@
+{
+	"name": "Chat_inventory",
+	"plugin-id": "Sprite",
+	"sid": 221378297153391,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5470753,
+						"collisionPoly": {
+							"points": [
+								0.54,
+								0.016,
+								0.736,
+								0.084,
+								0.982,
+								0.448,
+								0.96,
+								0.856,
+								0.908,
+								0.928,
+								0.832,
+								0.956,
+								0.71,
+								0.978,
+								0.494,
+								0.984,
+								0.34,
+								0.972,
+								0.188,
+								0.946,
+								0.12,
+								0.78,
+								0.124,
+								0.116
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 433746697637592,
+				"name": "Hunter",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3427790,
+						"collisionPoly": {
+							"points": [
+								0.54,
+								0.016,
+								0.736,
+								0.084,
+								0.982,
+								0.448,
+								0.96,
+								0.856,
+								0.908,
+								0.928,
+								0.832,
+								0.956,
+								0.71,
+								0.978,
+								0.494,
+								0.984,
+								0.34,
+								0.972,
+								0.188,
+								0.946,
+								0.12,
+								0.78,
+								0.124,
+								0.116
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 902440968326973,
+				"name": "Cassy",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

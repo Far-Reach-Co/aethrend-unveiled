@@ -1,0 +1,704 @@
+{
+	"name": "cassy_controller",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 811640381925581
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "SpawnCassy",
+					"sid": 539862364176789
+				}
+			],
+			"sid": 758578130754494,
+			"disabled": true
+		},
+		{
+			"functionName": "SpawnCassy",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_Spawner",
+					"sid": 858253084079193,
+					"parameters": {
+						"object": "CPlayer",
+						"layer": "\"player\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_Spawner",
+					"sid": 254318280858003,
+					"parameters": {
+						"object": "C_PlayerAwarenessLight2",
+						"layer": "\"light\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "C_PlayerAwarenessLight2",
+					"sid": 156228408542182,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "C_PlayerAwarenessLight2",
+					"sid": 734215057847403
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_Spawner",
+					"sid": 816188625105578,
+					"disabled": true,
+					"parameters": {
+						"object": "PlyerReach",
+						"layer": "\"player\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PlyerReach",
+					"sid": 983146403911848,
+					"disabled": true,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 903128652831904,
+					"parameters": {
+						"object-to-create": "C_IconRight",
+						"layer": "0",
+						"x": "CPlayer.X+50",
+						"y": "CPlayer.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "C_IconRight",
+					"sid": 954035974583381,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 575444631236754,
+					"parameters": {
+						"object-to-create": "C_IconLeft",
+						"layer": "0",
+						"x": "CPlayer.X-50",
+						"y": "CPlayer.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "C_IconLeft",
+					"sid": 496179874272950,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 206027437515787,
+					"parameters": {
+						"object-to-create": "C_IconUp",
+						"layer": "0",
+						"x": "CPlayer.X",
+						"y": "CPlayer.Y-50",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "C_IconUp",
+					"sid": 335956642146085,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 461123766685335,
+					"parameters": {
+						"object-to-create": "C_IconDown",
+						"layer": "0",
+						"x": "CPlayer.X",
+						"y": "CPlayer.Y+50",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "C_IconDown",
+					"sid": 602243765386338,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "C_Spawner",
+					"sid": 501872644325189,
+					"parameters": {
+						"object": "CPlayer_Animator2",
+						"layer": "\"player\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "CPlayer_Animator2",
+					"sid": 410921149030348,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "CPlayer",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 263408973684611
+		},
+		{
+			"eventType": "comment",
+			"text": "follow Player"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-within-angle",
+					"objectClass": "Player",
+					"sid": 253865863179847,
+					"parameters": {
+						"within": "30",
+						"angle": "angle(Player.X, Player.Y, CPlayer.X, CPlayer.Y)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CPlayer_Animator2",
+					"sid": 211322840320725,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "45",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 169955209600399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-within-angle",
+					"objectClass": "Player",
+					"sid": 826874741595355,
+					"parameters": {
+						"within": "150",
+						"angle": "angle(Player.X, Player.Y, CPlayer.X, CPlayer.Y)-180"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CPlayer_Animator2",
+					"sid": 860847378564079,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 463468503845407,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 323658863826246,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 917198282096899,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 103282395590228,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "Mouse.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 365916232533847,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "Mouse.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "CPlayer",
+							"sid": 503162370409638,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X+350",
+								"y": "Player.Y+350"
+							}
+						}
+					],
+					"sid": 447291628288520
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 958983852644058,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "Mouse.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 419894918389346,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "Mouse.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "CPlayer",
+							"sid": 503592474657625,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X-350",
+								"y": "Player.Y+350"
+							}
+						}
+					],
+					"sid": 273284473237470
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 825501369084137,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "Mouse.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 878829332149204,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "Mouse.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "CPlayer",
+							"sid": 818734636467260,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X+350",
+								"y": "Player.Y-350"
+							}
+						}
+					],
+					"sid": 989496590812768
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 387201471413220,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "Mouse.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 501485581981675,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "Mouse.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "find-path",
+							"objectClass": "CPlayer",
+							"sid": 393296949420057,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Player.X-350",
+								"y": "Player.Y-350"
+							}
+						}
+					],
+					"sid": 294401898717200
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "CPlayer",
+					"sid": 712686102243385,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "CPlayer",
+					"sid": 731163644740385,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 245254235607347
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "CPlayer",
+					"sid": 572266218861086,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "CPlayer",
+					"sid": 581798030658520,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 316580720405981
+		},
+		{
+			"eventType": "comment",
+			"text": "Stay in sight"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 394303017521588,
+					"parameters": {
+						"key": 65
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 854912924922512,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "C_IconLeft",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 939445518802016,
+					"parameters": {
+						"variable": "CharacterSelection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CPlayer",
+					"sid": 683931085749896,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 813269422459379
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 580605493862070,
+					"parameters": {
+						"key": 83
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 835073775773456,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "C_IconDown",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 888080553020100,
+					"parameters": {
+						"variable": "CharacterSelection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CPlayer",
+					"sid": 449761606786654,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 254134775722311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 926643249224643,
+					"parameters": {
+						"key": 68
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 103194023370327,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "C_IconRight",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 827881869424556,
+					"parameters": {
+						"variable": "CharacterSelection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CPlayer",
+					"sid": 664262934887062,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 826320832439027
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 139881890981455,
+					"parameters": {
+						"key": 87
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 341685306558589,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "C_IconUp",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 920103035844225,
+					"parameters": {
+						"variable": "CharacterSelection",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "CPlayer",
+					"sid": 237086043826179,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 594169133969403
+		}
+	],
+	"sid": 443900067386098
+}

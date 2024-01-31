@@ -1,0 +1,845 @@
+{
+	"name": "Env_Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 668013014453766,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "ENV_blockables.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-layer",
+					"objectClass": "ENV_blockables",
+					"sid": 878046848520164,
+					"parameters": {
+						"layer": "\"baddiesUnder\""
+					}
+				}
+			],
+			"sid": 598503452621444
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 908168465627414,
+					"parameters": {
+						"comparison": 3,
+						"y-co-ordinate": "ENV_blockables.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-layer",
+					"objectClass": "ENV_blockables",
+					"sid": 698493837268667,
+					"parameters": {
+						"layer": "\"baddiesOver\""
+					}
+				}
+			],
+			"sid": 637900532821814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 912757054816642,
+					"parameters": {
+						"object": "Flashlight"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 569995434629933,
+					"parameters": {
+						"object": "hudBanner"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 364405875917125,
+					"parameters": {
+						"object": "Dia_BG"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 126854378550505,
+					"parameters": {
+						"object": "Tile_map_sky"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 688376796373974,
+					"parameters": {
+						"object": "map_Church"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 224642680924913,
+					"parameters": {
+						"object": "map_Patrizio"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 670235792411238,
+					"parameters": {
+						"object": "dipshits_Map"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 743850044052232,
+					"parameters": {
+						"object": "CSheet_BG"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Parti_LurkingShadows_source",
+					"sid": 527828607222358
+				}
+			],
+			"sid": 746967988882041,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "baddieFam",
+					"sid": 698715235134173,
+					"parameters": {
+						"object": "env_light"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cycle-position",
+					"objectClass": "env_light",
+					"sid": 491329213721406,
+					"behaviorType": "Sine",
+					"parameters": {
+						"cycle-position": "1"
+					}
+				},
+				{
+					"id": "set-active",
+					"objectClass": "env_light",
+					"sid": 359313082895878,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "inactive"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "env_light",
+					"sid": 512566822623439,
+					"parameters": {
+						"animation": "\"flicker\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 555116936410966,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "set-cycle-position",
+					"objectClass": "env_light",
+					"sid": 104613294443303,
+					"behaviorType": "Sine",
+					"parameters": {
+						"cycle-position": "0"
+					}
+				},
+				{
+					"id": "set-active",
+					"objectClass": "env_light",
+					"sid": 676560464079831,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "active"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "env_light",
+					"sid": 200890438581936,
+					"parameters": {
+						"animation": "\"on\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 635849093043458
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Woods Events",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 226583375616758
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "trees2",
+							"sid": 952607763234070,
+							"parameters": {
+								"object": "trees2Over",
+								"layer": "\"OverFX\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Parti_Rain1",
+							"sid": 209120065477695,
+							"parameters": {
+								"x": "camera.X",
+								"y": "camera.Y"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Parti_Rain1",
+							"sid": 871880850752806,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "camera",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 653818354639677
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "trees2Over",
+							"sid": 372096187511570
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "trees2Over",
+							"sid": 500345509360195,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "-random(.5, 1.5)"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "trees2Over",
+							"sid": 233133386092534,
+							"parameters": {
+								"width": "trees2.Width+random(10, 30)",
+								"height": "trees2.Height+random(10, 30)"
+							}
+						}
+					],
+					"sid": 979007276243941
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 396555538976305,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 867404597788472,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "trees2Over",
+									"sid": 961069051788146,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Player.X+1500"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "trees2Over",
+									"sid": 393005910261188,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Player.X-1500"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "trees2Over",
+									"sid": 472626635218326,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetColor",
+										"end-value": "rgbEx(100, 100, 100)",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 678527937527134
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "trees2Over",
+									"sid": 934928015184603,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Player.Y+1500"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "trees2Over",
+									"sid": 657409545068714,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Player.Y-1500"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "trees2Over",
+									"sid": 502994695206675,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetColor",
+										"end-value": "rgbEx(100, 100, 100)",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 748309830899224
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "trees2Over",
+									"sid": 103715030177139,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Player.X+1500"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "trees2Over",
+									"sid": 593633768057660,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Player.X-1500"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "trees2Over",
+									"sid": 805211607307879,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Player.Y+1500"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "trees2Over",
+									"sid": 326398170910701,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Player.Y-1500"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "trees2Over",
+									"sid": 224346790464663,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetColor",
+										"end-value": "rgbEx(0, 0, 0)",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 984859513300162,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 169867391651287,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 783652727130839,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "trees2Over",
+									"sid": 354926098967984,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "trees2Over",
+									"sid": 568896640539522,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "35",
+										"time": "3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 470585031252449
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "trees2Over",
+									"sid": 921611031859087,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "trees2Over",
+									"sid": 436381825504963,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 256299722592700
+						}
+					]
+				}
+			],
+			"sid": 402511851911729
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bedroom",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Bear",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "OutsideBearMonster",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player",
+											"sid": 239368301936639,
+											"parameters": {
+												"object": "bear_Changer"
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "bear_Changer",
+											"sid": 121900734585533,
+											"parameters": {
+												"animation": "\"prechange\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "bear_Changer",
+											"sid": 608138043271779,
+											"parameters": {
+												"animation": "\"change\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "shake",
+											"objectClass": "camera",
+											"sid": 771295750318315,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "100",
+												"duration": "1",
+												"mode": "reducing-magnitude"
+											}
+										},
+										{
+											"id": "flash",
+											"objectClass": "Flashlight",
+											"sid": 578666842790430,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.05",
+												"off-time": "0.05",
+												"duration": "1.5"
+											}
+										}
+									],
+									"sid": 397205975664987
+								}
+							],
+							"sid": 955623943107101
+						},
+						{
+							"eventType": "variable",
+							"name": "BearIsSeen",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 667612585068533
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 666560468542240
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "bear",
+									"sid": 195999155287493,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 500267850001558
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "bear",
+									"sid": 711355399282101,
+									"parameters": {
+										"object": "Flashlight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "bear",
+									"sid": 592164463104054,
+									"parameters": {
+										"object": "PlayerAwarenessLight"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 668230474365339,
+									"parameters": {
+										"variable": "BearIsSeen",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 791940285180015,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "bear",
+									"sid": 197321343528174,
+									"parameters": {
+										"object": "Flashlight"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "bear",
+									"sid": 117898290334177,
+									"parameters": {
+										"object": "PlayerAwarenessLight"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 414714265591487,
+									"parameters": {
+										"variable": "BearIsSeen",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 526710247145782
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 729946812847480,
+									"parameters": {
+										"variable": "BearIsSeen"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 701757863396021,
+									"parameters": {
+										"interval-seconds": "random(1,10)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "bear",
+									"sid": 905921267968264,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 742447459006217,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 129834448110908,
+											"parameters": {
+												"object": "bear"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 854006330120479,
+											"disabled": true,
+											"parameters": {
+												"seconds": "random(1,5)"
+											}
+										},
+										{
+											"id": "set-opacity",
+											"objectClass": "bear",
+											"sid": 824177310281107,
+											"parameters": {
+												"opacity": "100"
+											}
+										}
+									],
+									"sid": 390904552934264
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 313118530757637,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlyerReach",
+									"sid": 326601168326692,
+									"parameters": {
+										"object": "bedroomDresser"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "bedroomDresser",
+									"sid": 984843125275418,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "bedroomDresser",
+									"sid": 237361562959834,
+									"disabled": true,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 950002899897910
+						}
+					],
+					"sid": 944679060706406
+				}
+			],
+			"sid": 606080784011657
+		}
+	],
+	"sid": 440776710100811
+}

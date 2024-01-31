@@ -1,0 +1,322 @@
+{
+	"name": "baddies_zombie_events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 265083980713555,
+					"parameters": {
+						"object": "zombie1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "zombie1",
+					"sid": 367616219827307,
+					"parameters": {
+						"instance-variable": "agro",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 768404547488344
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "zombie1",
+					"sid": 912323760140315,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 922687369421543,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "zombie1",
+					"sid": 972883512130767,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "zombie1",
+					"sid": 836554775604254,
+					"parameters": {
+						"instance-variable": "storedY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "zombie1",
+					"sid": 764434987960480,
+					"parameters": {
+						"instance-variable": "storedX",
+						"value": "Self.X"
+					}
+				}
+			],
+			"sid": 911462767667292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "zombie1",
+					"sid": 420806994824202,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "zombie1",
+					"sid": 537465439173351,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 361650310112662
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "zombie1",
+					"sid": 159374629116027,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "zombie1",
+					"sid": 788628159282236,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "zombie1",
+					"sid": 466395760526099,
+					"parameters": {
+						"instance-variable": "agro",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "zombie1",
+					"sid": 215387018378909,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 291158446934014
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-mirrored",
+					"objectClass": "zombie1",
+					"sid": 658930315216678
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 555998327992381,
+					"parameters": {
+						"instance-variable": "storedX",
+						"comparison": 4,
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "zombie1",
+					"sid": 743697362485560,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 797205758982835,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "zombie1",
+					"sid": 117669524946924,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 241959242075910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-mirrored",
+					"objectClass": "zombie1",
+					"sid": 367299767926702,
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 282927374178759,
+					"parameters": {
+						"instance-variable": "storedX",
+						"comparison": 2,
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "zombie1",
+					"sid": 642270212798272,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 947725341021793,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "zombie1",
+					"sid": 801222408358957,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 163906975804521
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 216201419309868,
+					"parameters": {
+						"instance-variable": "storedY",
+						"comparison": 2,
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 897577118381692,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "zombie1",
+					"sid": 887087428719643,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "zombie1",
+					"sid": 881802550867563,
+					"parameters": {
+						"animation": "\"towards\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 880720532168497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 423043502611732,
+					"parameters": {
+						"instance-variable": "storedY",
+						"comparison": 4,
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 646329219732202,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "zombie1",
+					"sid": 393658198764606,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "zombie1",
+					"sid": 244407761736932,
+					"parameters": {
+						"animation": "\"away\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 437956488667907
+		}
+	],
+	"sid": 156491835632140
+}

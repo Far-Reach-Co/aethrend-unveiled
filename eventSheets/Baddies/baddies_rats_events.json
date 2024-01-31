@@ -1,0 +1,257 @@
+{
+	"name": "baddies_rats_events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 464980027645408,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 487532113598466,
+					"parameters": {
+						"variable": "Canshoot"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 548695390953249,
+					"parameters": {
+						"variable": "ammoInMag",
+						"comparison": 5,
+						"value": "1"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 950097797030785,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "RatSpawner",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-opacity",
+					"objectClass": "Inspector",
+					"sid": 238019509438380,
+					"parameters": {
+						"comparison": 3,
+						"opacity": "45"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 393767497994886,
+					"parameters": {
+						"variable": "Inv_Active"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RatSpawner",
+					"sid": 730520441134896,
+					"parameters": {
+						"object": "Baddie_rats",
+						"layer": "\"baddiesUnder\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "Baddie_rats",
+					"sid": 266044893825156,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"acceleration": "80000"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Baddie_rats",
+					"sid": 423349187585159,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "100000"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "Baddie_rats",
+					"sid": 961669277438714,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 839923556327348
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 987438275833260,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Player",
+					"sid": 629044211367846,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "RatSpawner",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "RatSpawner",
+					"sid": 469174266140378,
+					"parameters": {
+						"instance-variable": "agro"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RatSpawner",
+					"sid": 133129533011962,
+					"parameters": {
+						"object": "Baddie_rats",
+						"layer": "\"baddiesUnder\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "Baddie_rats",
+					"sid": 793986944180834,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"acceleration": "80000"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Baddie_rats",
+					"sid": 417857215854191,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "100000"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "Baddie_rats",
+					"sid": 490149578700481,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 685001219270555
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Baddie_rats",
+					"sid": 219920144293436,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "Baddie_rats",
+					"sid": 758710099440192,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Baddie_rats",
+					"sid": 392872906849804,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "10000"
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "Baddie_rats",
+					"sid": 829577525699276,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"acceleration": "80000"
+					}
+				}
+			],
+			"sid": 894567237582745
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Baddie_rats",
+					"sid": 749898563181439,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Baddie_rats",
+					"sid": 701294645053229,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "move-at-angle",
+					"objectClass": "Baddie_rats",
+					"sid": 694223051962207,
+					"parameters": {
+						"angle": "Baddie_rats.Angle-180",
+						"distance": "150"
+					}
+				},
+				{
+					"callFunction": "HurtPlayer",
+					"sid": 527757245565694,
+					"parameters": [
+						"baddieFam.damage"
+					]
+				}
+			],
+			"sid": 585389098026813
+		}
+	],
+	"sid": 729273999577268
+}

@@ -1,0 +1,539 @@
+{
+	"name": "SFX_Events&Functions",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-released",
+					"objectClass": "Keyboard",
+					"sid": 939154220567137
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 170889538880441,
+					"parameters": {
+						"tag": "\"footsteps\""
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 444672830564919,
+					"parameters": {
+						"key": 83
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 976786717747339,
+					"parameters": {
+						"key": 68
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 338106557330225,
+					"parameters": {
+						"key": 87
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 620464255531134,
+					"parameters": {
+						"key": 65
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Stop-FootstepLoop_Muddy",
+					"sid": 805974022101437
+				}
+			],
+			"sid": 268126869277937
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 378703679424448,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Stop-FootstepLoop_Muddy",
+					"sid": 448598704445324
+				}
+			],
+			"sid": 614504504905664,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 543802567619811
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 849882706070274,
+					"parameters": {
+						"variable": "CurrentLocation",
+						"comparison": 0,
+						"value": "\"Game_Woods2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 758623642795146,
+					"parameters": {
+						"audio-file": "SFX_Rain_Loop",
+						"loop": "looping",
+						"volume": "-100",
+						"stereo-pan": "0",
+						"tag-optional": "\"amb\""
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 652810902372893,
+					"parameters": {
+						"tag": "\"amb\"",
+						"db": "-20",
+						"duration": "5",
+						"ending": "keep-playing"
+					}
+				}
+			],
+			"sid": 956148340685524
+		},
+		{
+			"functionName": "SFX_StopAmb",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 334939675929330,
+					"parameters": {
+						"tag": "\"amb\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 263113636170817,
+					"parameters": {
+						"tag": "\"mus\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				}
+			],
+			"sid": 841065239576016
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 452552017268309
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 387934744184828,
+					"parameters": {
+						"variable": "CurrentLocation",
+						"comparison": 0,
+						"value": "\"Game_Dipshits\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-convolution-effect",
+					"objectClass": "Audio",
+					"sid": 310910130007606,
+					"parameters": {
+						"tag": "\"verb\"",
+						"audio": "impulsedensehall",
+						"level": "normalize",
+						"mix": "10"
+					}
+				},
+				{
+					"id": "set-listener-object",
+					"objectClass": "Audio",
+					"sid": 484126734300545,
+					"parameters": {
+						"object": "Player"
+					}
+				},
+				{
+					"id": "play-at-position",
+					"objectClass": "Audio",
+					"sid": 754649082053327,
+					"parameters": {
+						"audio-file": "no_bards_left_behind_songtradr2709489",
+						"loop": "looping",
+						"volume": "-20",
+						"x": "7400",
+						"y": "2000",
+						"z": "0",
+						"angle": "180",
+						"inner-angle": "180",
+						"outer-angle": "360",
+						"outer-gain": "10",
+						"tag-optional": "\"mus\""
+					}
+				}
+			],
+			"sid": 645463004483991
+		},
+		{
+			"eventType": "comment",
+			"text": "VoiceStandins"
+		},
+		{
+			"functionName": "CassyTaunt",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "CPlayer",
+					"sid": 858560744007989,
+					"parameters": {
+						"instance-variable": "TauntCaller",
+						"value": "round(random(1,3))"
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 519570557660478,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "\"TempCassyTaunt\"&CPlayer.TauntCaller",
+						"loop": "not-looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"verb\""
+					}
+				}
+			],
+			"sid": 547740881047927
+		},
+		{
+			"functionName": "HunterTaunt",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 214046573289694,
+					"parameters": {
+						"instance-variable": "TauntCaller",
+						"value": "round(random(1,9))"
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 106571633926074,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "\"HunterTaunt\"&Player.TauntCaller",
+						"loop": "not-looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"verb\""
+					}
+				}
+			],
+			"sid": 956046662230613
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FootstepDriver",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "PlayFootstepLoop_MuddyQuick",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 635683347926179,
+							"disabled": true,
+							"parameters": {
+								"variable": "CurrentLocation",
+								"comparison": 0,
+								"value": "\"Game_Woods2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 535709173557197,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "\"SFX_FootstepsLoop\"&FootstepSurface",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Footsteps\""
+							}
+						}
+					],
+					"sid": 936465578848801
+				},
+				{
+					"functionName": "Stop-FootstepLoop_Muddy",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 923584071463255,
+							"parameters": {
+								"tag": "\"Footsteps\""
+							}
+						}
+					],
+					"sid": 176768829395653
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 331968288225846,
+							"parameters": {
+								"object": "SFX_Zones"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 946549167667296,
+							"parameters": {
+								"variable": "FootstepSurface",
+								"value": "SFX_Zones.FloorType"
+							}
+						}
+					],
+					"sid": 463640225534524,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 795790217996463,
+									"parameters": {
+										"tag": "\"footsteps\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 199541175904049,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 736451606096661,
+											"parameters": {
+												"key": 65
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 700155376351974,
+											"parameters": {
+												"key": 83
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 907464852707233,
+											"parameters": {
+												"key": 68
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 471078419856947,
+											"parameters": {
+												"key": 87
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "PlayFootstepLoop_MuddyQuick",
+											"sid": 259303614743344
+										}
+									],
+									"sid": 284459891064929
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 182275785128628,
+							"parameters": {
+								"tag": "\"footsteps\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 246658255053268,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 189343331485601,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 352781933777172,
+									"parameters": {
+										"key": 68
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 354713944765759,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 352936724645600,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "PlayFootstepLoop_MuddyQuick",
+									"sid": 285830432894723
+								}
+							],
+							"sid": 459521325957787,
+							"isOrBlock": true
+						}
+					]
+				}
+			],
+			"sid": 995437368129055
+		},
+		{
+			"eventType": "variable",
+			"name": "FootstepSurface",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 228170838649552
+		}
+	],
+	"sid": 903289135851917
+}

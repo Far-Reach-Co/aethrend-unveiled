@@ -1,0 +1,100 @@
+{
+	"name": "bedroomOver",
+	"plugin-id": "Sprite",
+	"sid": 525441919699107,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 77,
+						"height": 195,
+						"originX": 0.5064935064935064,
+						"originY": 0.3230769230769231,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3677355,
+						"collisionPoly": {
+							"points": [
+								0.5844155844155844,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 131480204389629,
+				"name": "s",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 852,
+						"height": 466,
+						"originX": 0.6390845070422535,
+						"originY": 0.9967811158798283,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7505809,
+						"collisionPoly": {
+							"points": [
+								0.0011737089201877935,
+								0.002145922746781116,
+								1,
+								0.002145922746781116,
+								1,
+								1,
+								0.0011737089201877935,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 447269931033524,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

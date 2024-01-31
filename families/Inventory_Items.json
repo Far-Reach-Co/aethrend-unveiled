@@ -1,0 +1,61 @@
+{
+	"name": "Inventory_Items",
+	"plugin-id": "Sprite",
+	"sid": 364157012477601,
+	"instanceVariables": [
+		{
+			"name": "Slot_ID_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 361223433598501
+		},
+		{
+			"name": "Name_Fam",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 762876195378324
+		},
+		{
+			"name": "Item_Type_Fam",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 621146872886230
+		},
+		{
+			"name": "Quantity_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 713736646939909
+		},
+		{
+			"name": "Equip_Type_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 831665895647319
+		},
+		{
+			"name": "Sort_Prior_Fam",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 494155742882293
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 384860895910143
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"obj_item_potions_inventory",
+		"obj_item_clues_inventory"
+	]
+}

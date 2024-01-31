@@ -1,0 +1,53 @@
+{
+	"name": "baddieFam",
+	"plugin-id": "Sprite",
+	"sid": 931463479000675,
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 806578105385583
+		},
+		{
+			"name": "resistance",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 768472813011404
+		},
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 670249830449589
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 168140490329690
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 389823219597861
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 973071383148422
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Ghost",
+		"zombie1",
+		"Baddie_rats",
+		"baddieShooter",
+		"zombie2"
+	]
+}

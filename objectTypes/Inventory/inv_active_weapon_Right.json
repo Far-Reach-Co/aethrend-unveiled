@@ -1,0 +1,156 @@
+{
+	"name": "inv_active_weapon_Right",
+	"plugin-id": "Sprite",
+	"sid": 508359750652155,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "CurrentSelection",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 652271812105194
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 418185704261563
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2480303,
+						"collisionPoly": {
+							"points": [
+								0.572,
+								0.032,
+								0.854,
+								0.176,
+								1,
+								0.512,
+								1,
+								1,
+								0.958,
+								1,
+								0.122,
+								0.81,
+								0.112,
+								0.764,
+								0.1,
+								0.194,
+								0.17,
+								0.062
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 112814561500415,
+				"name": "Fist",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 1
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.4988344988344988,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5614843,
+						"collisionPoly": {
+							"points": [
+								0.9425531914893617,
+								0.009324009324009324,
+								0.9957446808510638,
+								0.18414918414918416,
+								0.9914893617021276,
+								0.2680652680652681,
+								0.7702127659574468,
+								0.9417249417249417,
+								0.002127659574468085,
+								0.9953379953379954,
+								0.502127659574468,
+								0.29603729603729606,
+								0.823404255319149,
+								0.037296037296037296
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 803282240848635,
+				"name": "Knife",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 1
+			},
+			{
+				"frames": [
+					{
+						"width": 332,
+						"height": 135,
+						"originX": 0.5030425963488844,
+						"originY": 0.5659340659340659,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2595183,
+						"collisionPoly": {
+							"points": [
+								0.7403651115618661,
+								0.6923076923076923,
+								0.06490872210953341,
+								0.989010989010989,
+								0.008113590263691694,
+								0.989010989010989,
+								0.6592292089249493,
+								0.027472527472527628,
+								0.8924949290060852,
+								0.010989010989011146,
+								0.9898580121703854,
+								0.04945054945054961
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 842081781485859,
+				"name": "Sword",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 1
+			}
+		],
+		"subfolders": []
+	}
+}

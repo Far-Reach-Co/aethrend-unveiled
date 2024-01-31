@@ -1,0 +1,165 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 409281963343149,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 272843112031092
+		},
+		{
+			"name": "TauntCaller",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 916423106322429
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 865717734309068
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 209822816657840
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 988948518563695
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 110196801009707
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 250344933771655
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 942827443337854
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 513520296337540
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4353321,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gunpoint",
+								"x": 0.8475297278471565,
+								"y": 0.49751231404547486
+							},
+							{
+								"name": "Image Point 2",
+								"x": 1.0025374396736157,
+								"y": 0.5075128115826658
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 426845858965957,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7869225,
+						"collisionPoly": {
+							"points": [
+								0.43,
+								0,
+								0.57,
+								0,
+								0.87,
+								0.155,
+								1,
+								0.43,
+								1,
+								0.57,
+								0.845,
+								0.87,
+								0.57,
+								1,
+								0.43,
+								1,
+								0.13,
+								0.845,
+								0,
+								0.57,
+								0,
+								0.43,
+								0.155,
+								0.13
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "gunpoint",
+								"x": 0.8475297278471565,
+								"y": 0.49751231404547486
+							},
+							{
+								"name": "Image Point 2",
+								"x": 1.0025374396736157,
+								"y": 0.5075128115826658
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 279451243687806,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

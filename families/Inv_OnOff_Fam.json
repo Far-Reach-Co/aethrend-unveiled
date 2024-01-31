@@ -1,0 +1,20 @@
+{
+	"name": "Inv_OnOff_Fam",
+	"plugin-id": "Sprite",
+	"sid": 903273149430645,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"inv_button_clues",
+		"Button_MinusStats",
+		"Button_PlusStats",
+		"inv_active_weapon_Left",
+		"inv_active_weapon_Right",
+		"inv_button_items",
+		"inventory",
+		"obj_item_clues_inventory",
+		"obj_item_potions_inventory",
+		"Inventory_powerup_Blindfold"
+	]
+}

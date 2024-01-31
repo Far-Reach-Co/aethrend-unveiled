@@ -1,0 +1,100 @@
+{
+	"name": "MiniGame_bg",
+	"plugin-id": "Sprite",
+	"sid": 448890948225192,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ShakeValue",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 206610047109999
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 858108991554290
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1000,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5112879,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0,
+								0.625,
+								0,
+								0.625,
+								1,
+								0.375,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 366738446217137,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1954,
+						"height": 508,
+						"originX": 0.5,
+						"originY": 0.4625984251968504,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9653902,
+						"collisionPoly": {
+							"points": [
+								0.3751279426816786,
+								0,
+								0.6248720573183214,
+								0,
+								0.6248720573183214,
+								1,
+								0.3751279426816786,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 404255875700897,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

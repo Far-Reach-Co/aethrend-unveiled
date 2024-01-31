@@ -1,0 +1,56 @@
+{
+	"name": "MiniPeak",
+	"plugin-id": "Sprite",
+	"sid": 818514962777277,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 318344549985190
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 501,
+						"height": 501,
+						"originX": 0.5049900199600799,
+						"originY": 0.5109780439121756,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 451136,
+						"collisionPoly": {
+							"points": [
+								0.2554890219560878,
+								0.26147704590818366,
+								0.7544910179640719,
+								0.26147704590818366,
+								0.7544910179640719,
+								0.7604790419161678,
+								0.2554890219560878,
+								0.7604790419161678
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 447658764114758,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
