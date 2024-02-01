@@ -2126,177 +2126,11 @@
 			"children": [
 				{
 					"eventType": "group",
-					"disabled": true,
-					"title": "WallDetection_V2",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "PlyerReach",
-									"sid": 127517798291259,
-									"parameters": {
-										"object": "wall"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position",
-									"objectClass": "parti_blindfold_360WallDetection",
-									"sid": 943795278886780,
-									"parameters": {
-										"x": "lerp(Player.X, wall.X, 0.7)",
-										"y": "Player.Y"
-									}
-								}
-							],
-							"sid": 914673730406519,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "PlyerReach",
-									"sid": 962399372575286,
-									"parameters": {
-										"object": "wall"
-									}
-								},
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 325195734162488
-								}
-							],
-							"actions": [
-								{
-									"id": "set-spraying",
-									"objectClass": "parti_blindfold_360WallDetection",
-									"sid": 420566959886948,
-									"parameters": {
-										"state": "spraying"
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 204950252208545,
-									"parameters": {
-										"object-to-create": "parti_blindfold_360WallDetection",
-										"layer": "\"OverFX\"",
-										"x": "lerp(Player.X, wall.X, 0.5)",
-										"y": "lerp(Player.Y, wall.Y, 0.5)",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								}
-							],
-							"sid": 456347838952433,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "parti_blindfold_360WallDetection_Source",
-									"sid": 283655132007710,
-									"parameters": {
-										"object": "wall"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 595601995857272,
-									"parameters": {
-										"seconds": "0.3"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "parti_blindfold_360WallDetection_Source",
-									"sid": 389341786023475
-								}
-							],
-							"sid": 831994050937035,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "PlyerReach",
-									"sid": 333294723147942,
-									"parameters": {
-										"object": "wall"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-spraying",
-									"objectClass": "parti_blindfold_360WallDetection",
-									"sid": 423285833715466,
-									"parameters": {
-										"state": "not-spraying"
-									}
-								}
-							],
-							"sid": 393371646813781,
-							"disabled": true
-						}
-					],
-					"sid": 621160271372874
-				},
-				{
-					"eventType": "group",
 					"disabled": false,
 					"title": "WallDetection",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-start-of-layout",
-									"objectClass": "System",
-									"sid": 717648942303158
-								},
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 521433730948309,
-									"parameters": {
-										"object": "wall"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "wall",
-									"sid": 380038411151319,
-									"parameters": {
-										"instance-variable": "RealWidth",
-										"value": "Self.Width"
-									}
-								}
-							],
-							"sid": 790776406479651,
-							"disabled": true
-						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -2352,139 +2186,303 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "PlyerReach",
-									"sid": 879867686324983,
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 587739075741412,
 									"parameters": {
 										"object": "wall"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 784519545335740,
+							"sid": 997499432608900,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "PlyerReach",
+											"sid": 917218570621219,
+											"parameters": {
+												"object": "wall"
+											}
+										},
+										{
 											"id": "compare-width",
 											"objectClass": "wall",
-											"sid": 433835783686577,
+											"sid": 383931262572192,
 											"parameters": {
-												"comparison": 2,
+												"comparison": 3,
 												"width": "Self.Height"
+											}
+										},
+										{
+											"id": "compare-y",
+											"objectClass": "Player",
+											"sid": 126058893855725,
+											"parameters": {
+												"comparison": 5,
+												"y-co-ordinate": "wall.Y+(Player.Height/2)"
+											}
+										},
+										{
+											"id": "compare-y",
+											"objectClass": "Player",
+											"sid": 597777537284995,
+											"parameters": {
+												"comparison": 3,
+												"y-co-ordinate": "wall.Y+wall.Height-(Player.Height/2)"
 											}
 										}
 									],
 									"actions": [
 										{
+											"id": "set-spray-cone",
+											"objectClass": "parti_blindfold_WallDetection",
+											"sid": 465183796145840,
+											"parameters": {
+												"spray-cone": "360"
+											}
+										},
+										{
 											"id": "set-spraying",
 											"objectClass": "parti_blindfold_WallDetection",
-											"sid": 578007232925139,
+											"sid": 502827433837362,
 											"parameters": {
 												"state": "spraying"
 											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "parti_blindfold_WallDetection",
+											"sid": 479625866918359,
+											"parameters": {
+												"x": "wall.X"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "parti_blindfold_WallDetection",
+											"sid": 840120196084277,
+											"parameters": {
+												"y": "Player.Y"
+											}
 										}
 									],
-									"sid": 371192068998432,
+									"sid": 436307729578005,
 									"children": [
 										{
 											"eventType": "block",
-											"conditions": [
+											"conditions": [],
+											"actions": [],
+											"sid": 133670083568535,
+											"disabled": true,
+											"children": [
 												{
-													"id": "compare-x",
-													"objectClass": "wall",
-													"sid": 680413150487320,
-													"parameters": {
-														"comparison": 4,
-														"x-co-ordinate": "Player.X"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-x",
+															"objectClass": "wall",
+															"sid": 283464678715720,
+															"parameters": {
+																"comparison": 4,
+																"x-co-ordinate": "Player.X"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 928838771860359,
+															"parameters": {
+																"x": "wall.X"
+															}
+														},
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 716800825056611,
+															"parameters": {
+																"y": "Player.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 911631134113109,
+															"parameters": {
+																"angle": "180"
+															}
+														}
+													],
+													"sid": 459308912984756
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-x",
+															"objectClass": "wall",
+															"sid": 596473434699396,
+															"parameters": {
+																"comparison": 2,
+																"x-co-ordinate": "Player.X"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 306461947948754,
+															"parameters": {
+																"x": "wall.X"
+															}
+														},
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 366537942002621,
+															"parameters": {
+																"y": "Player.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 963199080351243,
+															"parameters": {
+																"angle": "0"
+															}
+														}
+													],
+													"sid": 406911061405682
 												}
-											],
-											"actions": [
-												{
-													"id": "set-x",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 958737090004753,
-													"parameters": {
-														"x": "wall.X-(wall.Width/2)"
-													}
-												},
-												{
-													"id": "set-y",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 733729313642819,
-													"parameters": {
-														"y": "clamp(Self.Y, 10000000, Player.Y)"
-													}
-												},
-												{
-													"id": "set-y",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 940364136667764,
-													"parameters": {
-														"y": "clamp(Self.Y, wall.Y+wall.Height, Player.Y)"
-													}
-												},
-												{
-													"id": "set-angle",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 198211268690845,
-													"parameters": {
-														"angle": "180"
-													}
-												}
-											],
-											"sid": 869788812617892
+											]
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-x",
+													"id": "compare-width",
 													"objectClass": "wall",
-													"sid": 908813425618381,
+													"sid": 245242914794508,
 													"parameters": {
-														"comparison": 2,
-														"x-co-ordinate": "Player.X"
+														"comparison": 4,
+														"width": "Self.Height"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-x",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 450511860028356,
+													"id": "set-spraying",
+													"objectClass": "parti_blindfold_WallDetection_Y",
+													"sid": 215152337723389,
 													"parameters": {
-														"x": "wall.X+(wall.Width/2)"
-													}
-												},
-												{
-													"id": "set-y",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 515240194840736,
-													"parameters": {
-														"y": "clamp(Self.Y, 100000000, Player.Y)"
-													}
-												},
-												{
-													"id": "set-y",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 650262712041685,
-													"parameters": {
-														"y": "clamp(Self.Y, wall.Y+wall.Height, Player.Y)"
-													}
-												},
-												{
-													"id": "set-angle",
-													"objectClass": "parti_blindfold_WallDetection",
-													"sid": 787968575060799,
-													"parameters": {
-														"angle": "0"
+														"state": "spraying"
 													}
 												}
 											],
-											"sid": 536535346250613
+											"sid": 319670895903212,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-y",
+															"objectClass": "wall",
+															"sid": 788337497320789,
+															"parameters": {
+																"comparison": 4,
+																"y-co-ordinate": "Player.Y"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 258383403553044,
+															"parameters": {
+																"y": "wall.Y"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 604612358027153,
+															"parameters": {
+																"x": "Player.X"
+															}
+														},
+														{
+															"id": "set-angle-toward-position",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 613509304612681,
+															"parameters": {
+																"x": "Player.X",
+																"y": "Player.Y"
+															}
+														}
+													],
+													"sid": 717824449629404,
+													"disabled": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-y",
+															"objectClass": "wall",
+															"sid": 317933041769283,
+															"parameters": {
+																"comparison": 2,
+																"y-co-ordinate": "Player.Y"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 179429828575406,
+															"parameters": {
+																"y": "wall.Y"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 265817912457793,
+															"parameters": {
+																"x": "Player.X"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 813861805852159,
+															"parameters": {
+																"x": "clamp(wall.X, wall.X+wall.Width, Player.X)"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 553287068322096,
+															"parameters": {
+																"angle": "270"
+															}
+														}
+													],
+													"sid": 763404884903565,
+													"disabled": true
+												}
+											]
 										}
 									]
 								},
@@ -2492,117 +2490,288 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "PlyerReach",
+											"sid": 144576495249557,
+											"parameters": {
+												"object": "wall"
+											}
+										},
+										{
 											"id": "compare-width",
 											"objectClass": "wall",
-											"sid": 703164194136184,
+											"sid": 100645164761790,
 											"parameters": {
-												"comparison": 4,
+												"comparison": 5,
 												"width": "Self.Height"
+											}
+										},
+										{
+											"id": "compare-x",
+											"objectClass": "Player",
+											"sid": 534232929377510,
+											"parameters": {
+												"comparison": 5,
+												"x-co-ordinate": "wall.X+(Player.Height/2)"
+											}
+										},
+										{
+											"id": "compare-x",
+											"objectClass": "Player",
+											"sid": 607562790355115,
+											"parameters": {
+												"comparison": 3,
+												"x-co-ordinate": "wall.X+wall.Width-(Player.Height/2)"
 											}
 										}
 									],
 									"actions": [
 										{
+											"id": "set-spray-cone",
+											"objectClass": "parti_blindfold_WallDetection_Y",
+											"sid": 344936626757839,
+											"parameters": {
+												"spray-cone": "360"
+											}
+										},
+										{
 											"id": "set-spraying",
 											"objectClass": "parti_blindfold_WallDetection_Y",
-											"sid": 132057897653954,
+											"sid": 897203905176415,
 											"parameters": {
 												"state": "spraying"
 											}
+										},
+										{
+											"id": "set-x",
+											"objectClass": "parti_blindfold_WallDetection_Y",
+											"sid": 561507857451686,
+											"parameters": {
+												"x": "Player.X"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "parti_blindfold_WallDetection_Y",
+											"sid": 547691691977844,
+											"parameters": {
+												"y": "wall.Y"
+											}
 										}
 									],
-									"sid": 800820486422254,
+									"sid": 446523310060604,
 									"children": [
 										{
 											"eventType": "block",
-											"conditions": [
+											"conditions": [],
+											"actions": [],
+											"sid": 177037181307844,
+											"disabled": true,
+											"children": [
 												{
-													"id": "compare-y",
-													"objectClass": "wall",
-													"sid": 858381671332907,
-													"parameters": {
-														"comparison": 4,
-														"y-co-ordinate": "Player.Y"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-y",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 216195305482248,
-													"parameters": {
-														"y": "wall.Y"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-x",
+															"objectClass": "wall",
+															"sid": 190446217390287,
+															"parameters": {
+																"comparison": 4,
+																"x-co-ordinate": "Player.X"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 463492375709799,
+															"parameters": {
+																"x": "wall.X"
+															}
+														},
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 198123741856064,
+															"parameters": {
+																"y": "Player.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 620579794661980,
+															"parameters": {
+																"angle": "180"
+															}
+														}
+													],
+													"sid": 585149161270159
 												},
 												{
-													"id": "set-x",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 650849550982242,
-													"parameters": {
-														"x": "Player.X"
-													}
-												},
-												{
-													"id": "set-angle-toward-position",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 707807192856184,
-													"parameters": {
-														"x": "Player.X",
-														"y": "Player.Y"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-x",
+															"objectClass": "wall",
+															"sid": 325820334286253,
+															"parameters": {
+																"comparison": 2,
+																"x-co-ordinate": "Player.X"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 733297629790709,
+															"parameters": {
+																"x": "wall.X"
+															}
+														},
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 482907859692082,
+															"parameters": {
+																"y": "Player.Y"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection",
+															"sid": 421865621340264,
+															"parameters": {
+																"angle": "0"
+															}
+														}
+													],
+													"sid": 862106866341459
 												}
-											],
-											"sid": 474596231433884
+											]
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-y",
+													"id": "compare-width",
 													"objectClass": "wall",
-													"sid": 903729266866961,
+													"sid": 592207501540049,
 													"parameters": {
-														"comparison": 2,
-														"y-co-ordinate": "Player.Y"
+														"comparison": 4,
+														"width": "Self.Height"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-y",
+													"id": "set-spraying",
 													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 527516752044340,
+													"sid": 331971218363823,
 													"parameters": {
-														"y": "wall.Y"
-													}
-												},
-												{
-													"id": "set-x",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 415845548441077,
-													"parameters": {
-														"x": "Player.X"
-													}
-												},
-												{
-													"id": "set-x",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 746810805879842,
-													"parameters": {
-														"x": "clamp(wall.X, wall.X+wall.Width, Player.X)"
-													}
-												},
-												{
-													"id": "set-angle",
-													"objectClass": "parti_blindfold_WallDetection_Y",
-													"sid": 109676959464765,
-													"parameters": {
-														"angle": "270"
+														"state": "spraying"
 													}
 												}
 											],
-											"sid": 570102511936830
+											"sid": 835057139932438,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-y",
+															"objectClass": "wall",
+															"sid": 805425384304800,
+															"parameters": {
+																"comparison": 4,
+																"y-co-ordinate": "Player.Y"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 104222182964700,
+															"parameters": {
+																"y": "wall.Y"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 921519326041677,
+															"parameters": {
+																"x": "Player.X"
+															}
+														},
+														{
+															"id": "set-angle-toward-position",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 899404345608881,
+															"parameters": {
+																"x": "Player.X",
+																"y": "Player.Y"
+															}
+														}
+													],
+													"sid": 421051119441011,
+													"disabled": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-y",
+															"objectClass": "wall",
+															"sid": 587381506426073,
+															"parameters": {
+																"comparison": 2,
+																"y-co-ordinate": "Player.Y"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-y",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 617279939229994,
+															"parameters": {
+																"y": "wall.Y"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 575152095128320,
+															"parameters": {
+																"x": "Player.X"
+															}
+														},
+														{
+															"id": "set-x",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 186852103803868,
+															"parameters": {
+																"x": "clamp(wall.X, wall.X+wall.Width, Player.X)"
+															}
+														},
+														{
+															"id": "set-angle",
+															"objectClass": "parti_blindfold_WallDetection_Y",
+															"sid": 359756416102197,
+															"parameters": {
+																"angle": "270"
+															}
+														}
+													],
+													"sid": 269534868995587,
+													"disabled": true
+												}
+											]
 										}
 									]
 								}
@@ -2662,25 +2831,6 @@
 							"sid": 970262396172043,
 							"parameters": {
 								"animation": "\"Off\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 868397905791704,
-							"disabled": true,
-							"parameters": {
-								"seconds": "1.0"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Blindfold_Overlay",
-							"sid": 790042275718308,
-							"disabled": true,
-							"parameters": {
-								"animation": "\"off\"",
 								"from": "beginning"
 							}
 						},

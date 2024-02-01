@@ -636,9 +636,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 903,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {

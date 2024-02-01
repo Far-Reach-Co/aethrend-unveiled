@@ -2836,6 +2836,33 @@
 							"sid": 302029970826326
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 672749089247796,
+							"parameters": {
+								"object": "NPC_01"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "Player_Animator",
+							"sid": 793167535413855,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "5.0"
+							}
+						}
+					],
+					"sid": 271590854871145
 				}
 			],
 			"sid": 260590669383421
