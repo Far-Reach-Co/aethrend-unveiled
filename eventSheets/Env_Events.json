@@ -645,11 +645,20 @@
 							],
 							"actions": [
 								{
-									"id": "set-opacity",
+									"id": "tween-one-property",
 									"objectClass": "bear",
-									"sid": 195999155287493,
+									"sid": 834470759044900,
+									"behaviorType": "Tween",
 									"parameters": {
-										"opacity": "0"
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": ".3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
 									}
 								}
 							],
@@ -747,11 +756,20 @@
 							],
 							"actions": [
 								{
-									"id": "set-opacity",
+									"id": "tween-one-property",
 									"objectClass": "bear",
-									"sid": 905921267968264,
+									"sid": 659173904350240,
+									"behaviorType": "Tween",
 									"parameters": {
-										"opacity": "0"
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": ".3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
 									}
 								}
 							],
@@ -771,20 +789,20 @@
 									],
 									"actions": [
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 854006330120479,
-											"disabled": true,
-											"parameters": {
-												"seconds": "random(1,5)"
-											}
-										},
-										{
-											"id": "set-opacity",
+											"id": "tween-one-property",
 											"objectClass": "bear",
-											"sid": 824177310281107,
+											"sid": 573934916920620,
+											"behaviorType": "Tween",
 											"parameters": {
-												"opacity": "100"
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": ".3",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
 											}
 										}
 									],

@@ -620,9 +620,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 1016,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -795,9 +793,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 892,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -864,9 +860,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 893,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -933,9 +927,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 895,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1002,9 +994,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 898,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1071,9 +1061,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 899,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1140,9 +1128,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 900,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1209,9 +1195,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 901,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1667,9 +1651,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 995,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {

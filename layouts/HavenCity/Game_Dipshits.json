@@ -597,8 +597,8 @@
 						}
 					},
 					"world": {
-						"x": 3250,
-						"y": 1500,
+						"x": 1950,
+						"y": 2150,
 						"width": 400,
 						"height": 400,
 						"originX": 0.5,
@@ -996,9 +996,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 517,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1065,9 +1063,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 519,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1134,9 +1130,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 520,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1203,9 +1197,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 521,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1272,9 +1264,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 527,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1341,9 +1331,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 528,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1410,9 +1398,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 534,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1479,9 +1465,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 530,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1548,9 +1532,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 536,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1617,9 +1599,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 537,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1686,9 +1666,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 538,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
@@ -1755,9 +1733,7 @@
 						"blend-margin-y": 0.1
 					},
 					"uid": 539,
-					"instanceVariables": {
-						"RealWidth": 0
-					},
+					"instanceVariables": {},
 					"behaviors": {
 						"ShadowCaster": {
 							"properties": {
