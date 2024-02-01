@@ -3883,8 +3883,8 @@
 						}
 					},
 					"world": {
-						"x": 5800,
-						"y": 9400,
+						"x": 5750,
+						"y": 13200,
 						"width": 250,
 						"height": 400,
 						"originX": 0.136,
@@ -4319,8 +4319,8 @@
 						}
 					},
 					"world": {
-						"x": 2350,
-						"y": -750,
+						"x": 2050,
+						"y": -900,
 						"width": 300,
 						"height": 300,
 						"originX": 0.5,
@@ -4995,9 +4995,9 @@
 						}
 					},
 					"world": {
-						"x": -50,
+						"x": 150,
 						"y": 3450,
-						"width": 2200,
+						"width": 2000,
 						"height": 85,
 						"originX": 0,
 						"originY": 0,
@@ -6588,7 +6588,7 @@
 						"x": 4850,
 						"y": 8500,
 						"width": 200,
-						"height": 5600,
+						"height": 5400,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -6797,9 +6797,9 @@
 						}
 					},
 					"world": {
-						"x": -50,
+						"x": 150,
 						"y": 350,
-						"width": 750,
+						"width": 550,
 						"height": 3150,
 						"originX": 0,
 						"originY": 0,
@@ -6850,10 +6850,10 @@
 						}
 					},
 					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 11600,
-						"height": 750,
+						"x": 150,
+						"y": 300,
+						"width": 11450,
+						"height": 450,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -6903,9 +6903,9 @@
 						}
 					},
 					"world": {
-						"x": -100,
+						"x": 200,
 						"y": 4750,
-						"width": 450,
+						"width": 150,
 						"height": 6650,
 						"originX": 0,
 						"originY": 0,
@@ -7064,7 +7064,7 @@
 					"world": {
 						"x": 11190,
 						"y": 150,
-						"width": 681,
+						"width": 400,
 						"height": 11250,
 						"originX": 0,
 						"originY": 0,
@@ -7222,9 +7222,9 @@
 					},
 					"world": {
 						"x": 4200,
-						"y": 2350,
+						"y": 2050,
 						"width": 200,
-						"height": 1100,
+						"height": 1400,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -7751,9 +7751,9 @@
 						}
 					},
 					"world": {
-						"x": -100,
+						"x": 150,
 						"y": 4682,
-						"width": 2250,
+						"width": 2000,
 						"height": 118,
 						"originX": 0,
 						"originY": 0,
@@ -7859,7 +7859,7 @@
 					"world": {
 						"x": 6200,
 						"y": 8445,
-						"width": 1250,
+						"width": 1300,
 						"height": 200,
 						"originX": 0,
 						"originY": 0,
@@ -8997,7 +8997,7 @@
 						"x": 141.35665981164402,
 						"y": 11227,
 						"width": 4822.9938240918955,
-						"height": 323.51795122033036,
+						"height": 288,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -9063,7 +9063,7 @@
 					"world": {
 						"x": 6823.466985594283,
 						"y": 11253,
-						"width": 4903.6745544110345,
+						"width": 4750,
 						"height": 300,
 						"originX": 0,
 						"originY": 0,
@@ -9192,7 +9192,7 @@
 					"world": {
 						"x": 45.42249031810752,
 						"y": 68.48954916839602,
-						"width": 11750,
+						"width": 11600,
 						"height": 300,
 						"originX": 0,
 						"originY": 0,
@@ -9260,7 +9260,7 @@
 						"x": 45.42249031810752,
 						"y": 239,
 						"width": 150,
-						"height": 11300,
+						"height": 11276.06633007501,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -9325,9 +9325,9 @@
 					},
 					"world": {
 						"x": 11459,
-						"y": 22,
-						"width": 450,
-						"height": 11550,
+						"y": 72,
+						"width": 200,
+						"height": 11479,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -9447,8 +9447,8 @@
 						}
 					},
 					"world": {
-						"x": 2350,
-						"y": -750,
+						"x": 2750,
+						"y": -1050,
 						"width": 500,
 						"height": 500,
 						"originX": 0.5,
@@ -9648,9 +9648,9 @@
 						}
 					},
 					"world": {
-						"x": 11.38846292106382,
+						"x": 111.38846292106382,
 						"y": 7886.471886898356,
-						"width": 1250,
+						"width": 1150,
 						"height": 28.489549168396024,
 						"originX": 0,
 						"originY": 0,
@@ -10923,7 +10923,7 @@
 					"world": {
 						"x": 8456,
 						"y": 6489,
-						"width": 3446.6329752243737,
+						"width": 3200,
 						"height": 28.489549168396024,
 						"originX": 0,
 						"originY": 0,
@@ -10990,7 +10990,7 @@
 					"world": {
 						"x": 9212,
 						"y": 5087,
-						"width": 2500,
+						"width": 2300,
 						"height": 59.489549168396024,
 						"originX": 0,
 						"originY": 0,
@@ -11057,7 +11057,7 @@
 					"world": {
 						"x": 9203,
 						"y": 3423,
-						"width": 2650,
+						"width": 2300,
 						"height": 28.489549168396024,
 						"originX": 0,
 						"originY": 0,
@@ -11324,9 +11324,9 @@
 					},
 					"world": {
 						"x": 9872,
-						"y": 5.499945026248952,
+						"y": 105.49994502624895,
 						"width": 27.198266858522555,
-						"height": 2050,
+						"height": 1950,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -14989,9 +14989,9 @@
 					},
 					"world": {
 						"x": 4250,
-						"y": 7100,
+						"y": 7113.5874459732195,
 						"width": 1250,
-						"height": 100,
+						"height": 86.41255402678053,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16201,9 +16201,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
+							0.30196078431372547,
 							1,
-							0.6,
-							0.6,
+							0,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -16218,97 +16218,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 5100,
-						"y": 14100,
+						"x": 5550,
+						"y": 14200,
 						"width": 2450,
-						"height": 500,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DevNotes",
-					"properties": {
-						"text": "To Basement",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 250,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							0.6,
-							0.6,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 95,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 4850,
-						"y": 350,
-						"width": 2400,
-						"height": 500,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DevNotes",
-					"properties": {
-						"text": "Memorial",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 250,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							0.6,
-							0.6,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 96,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 500,
-						"y": 4350,
-						"width": 1450,
 						"height": 500,
 						"originX": 0,
 						"originY": 0,
@@ -16350,8 +16262,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 4300,
-						"y": 6800,
+						"x": 4800,
+						"y": 6550,
 						"width": 2400,
 						"height": 500,
 						"originX": 0,
@@ -16394,8 +16306,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 10150,
-						"y": -700,
+						"x": 7700,
+						"y": 12800,
 						"width": 3600,
 						"height": 500,
 						"originX": 0,
@@ -16438,10 +16350,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 250,
-						"y": 350,
-						"width": 3400,
-						"height": 500,
+						"x": 1250,
+						"y": 2700,
+						"width": 2650,
+						"height": 400,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16450,7 +16362,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 0.00800197486510136,
 						"zElevation": 0
 					}
 				},
@@ -16482,9 +16394,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 450,
-						"y": 10600,
-						"width": 4200,
+						"x": 650,
+						"y": 10300,
+						"width": 1600,
 						"height": 500,
 						"originX": 0,
 						"originY": 0,
@@ -16501,7 +16413,7 @@
 				{
 					"type": "DevNotes",
 					"properties": {
-						"text": "EX1 Snatcher",
+						"text": "EX 1 Snatcher",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 125,
@@ -16526,8 +16438,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 4300,
-						"y": 8300,
+						"x": 4250,
+						"y": 8200,
 						"width": 1100,
 						"height": 250,
 						"originX": 0,
@@ -16545,7 +16457,7 @@
 				{
 					"type": "DevNotes",
 					"properties": {
-						"text": "EX 2 Banshee",
+						"text": "EX 3 Banshee",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 150,
@@ -16572,8 +16484,8 @@
 					"world": {
 						"x": 50,
 						"y": 13400,
-						"width": 4200,
-						"height": 400,
+						"width": 1350,
+						"height": 250,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16589,7 +16501,7 @@
 				{
 					"type": "DevNotes",
 					"properties": {
-						"text": "EX3 Shattered Mirror",
+						"text": "EX 2. Mirror",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 150,
@@ -16614,10 +16526,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -50,
-						"y": 3950,
-						"width": 1350,
-						"height": 500,
+						"x": 600,
+						"y": 4200,
+						"width": 1600,
+						"height": 600,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16633,7 +16545,7 @@
 				{
 					"type": "DevNotes",
 					"properties": {
-						"text": "EX3 Cassy2.0",
+						"text": "EX 5 Cassy 2.0",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 150,
@@ -16658,10 +16570,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 7000,
-						"y": 10650,
+						"x": 6950,
+						"y": 10950,
 						"width": 4200,
-						"height": 500,
+						"height": 250,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16677,7 +16589,7 @@
 				{
 					"type": "DevNotes",
 					"properties": {
-						"text": "EX5 Aether Dragon",
+						"text": "EX 6 Aether Dragon",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 150,
@@ -16703,8 +16615,360 @@
 					"behaviors": {},
 					"world": {
 						"x": 0,
-						"y": 14250,
-						"width": 4200,
+						"y": 14350,
+						"width": 1850,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "EX 1 Snatcher",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 125,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 96,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1450,
+						"y": 12800,
+						"width": 1100,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "EX 5 Cassy 2.0",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 150,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1315,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1450,
+						"y": 14000,
+						"width": 1600,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "EX 2. Shattered Mirror",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 150,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1316,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1450,
+						"y": 13100,
+						"width": 2150,
+						"height": 200,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "EX 4 Bear",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 150,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1317,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1450,
+						"y": 13700,
+						"width": 1600,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "To Garden",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 250,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.30196078431372547,
+							1,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1318,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 250,
+						"y": 750,
+						"width": 2450,
+						"height": 500,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "To Garden",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 250,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.30196078431372547,
+							1,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1319,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 600,
+						"y": 3850,
+						"width": 2450,
+						"height": 500,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "To Basement",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 250,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.30196078431372547,
+							1,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1320,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 4300,
+						"y": 2550,
+						"width": 2450,
+						"height": 500,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevNotes",
+					"properties": {
+						"text": "To Upstairs",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 250,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.30196078431372547,
+							1,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1321,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 6800,
+						"y": 300,
+						"width": 1750,
 						"height": 500,
 						"originX": 0,
 						"originY": 0,
