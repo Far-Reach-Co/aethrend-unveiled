@@ -668,15 +668,6 @@
 										"instance-variable": "setting",
 										"value": "1"
 									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Flashlight",
-									"sid": 107950295933797,
-									"parameters": {
-										"animation": "\"setting\"&Self.setting",
-										"from": "beginning"
-									}
 								}
 							],
 							"sid": 210890276164679
@@ -702,15 +693,6 @@
 										"instance-variable": "setting",
 										"value": "1"
 									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Flashlight",
-									"sid": 291090128561501,
-									"parameters": {
-										"animation": "\"setting\"&Self.setting",
-										"from": "beginning"
-									}
 								}
 							],
 							"sid": 200151588553090
@@ -721,11 +703,11 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Flashlight",
-									"sid": 263126373482129,
+									"sid": 561795619768209,
 									"parameters": {
 										"instance-variable": "setting",
 										"comparison": 5,
-										"value": "6"
+										"value": "30"
 									}
 								}
 							],
@@ -733,18 +715,18 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Flashlight",
-									"sid": 538079489972318,
+									"sid": 443663251356874,
 									"parameters": {
 										"instance-variable": "setting",
-										"value": "5"
+										"value": "30"
 									}
 								},
 								{
 									"id": "set-animation",
 									"objectClass": "Flashlight",
-									"sid": 434105900152714,
+									"sid": 204269841600250,
 									"parameters": {
-										"animation": "\"setting\"&Self.setting",
+										"animation": "\"circle\"",
 										"from": "beginning"
 									}
 								}
@@ -757,11 +739,11 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Flashlight",
-									"sid": 250628140182585,
+									"sid": 873361155626490,
 									"parameters": {
 										"instance-variable": "setting",
 										"comparison": 3,
-										"value": "0"
+										"value": "1"
 									}
 								}
 							],
@@ -778,14 +760,51 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Flashlight",
-									"sid": 626697762787653,
+									"sid": 151677277896869,
 									"parameters": {
-										"animation": "\"setting\"&Self.setting",
+										"animation": "\"narrow\"",
 										"from": "beginning"
 									}
 								}
 							],
 							"sid": 263437236328892
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Flashlight",
+									"sid": 389093475672323,
+									"parameters": {
+										"instance-variable": "setting",
+										"comparison": 4,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Flashlight",
+									"sid": 890822742202470,
+									"parameters": {
+										"instance-variable": "setting",
+										"comparison": 2,
+										"value": "30"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Flashlight",
+									"sid": 715349049727849,
+									"parameters": {
+										"animation": "\"cone\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 592729280966674
 						}
 					]
 				}
